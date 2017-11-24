@@ -257,7 +257,7 @@ const Validations = {
         let ufValida = false;
 
         if (uf.length === 2) {
-            upperUf = uf.toUpperCase();
+            let upperUf = uf.toUpperCase();
             if (allUf.indexOf(upperUf) !== -1) {
                 ufValida = true;
             }

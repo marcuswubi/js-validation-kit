@@ -12,12 +12,12 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\"",
-    "build": "node_modules/babel-cli/bin/babel.js src --out-dir lib"
+    "build": "rm -rf lib && node_modules/babel-cli/bin/babel.js src --out-dir lib",
+    "prepublishOnly": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/marcuswubi/js-validation-kit.git",
-    "prepublishOnly": "npm run build"
   },
   "keywords": [
     "javascript",
