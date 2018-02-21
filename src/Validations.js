@@ -341,6 +341,52 @@ const Validations = {
         resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
         return resultado === digitos.charAt(1);
     },
+
+    /**
+     * @param cei
+     * @returns {boolean}
+     */
+    validateCEI = function (cei) {
+        if (!cei) {
+            return false;
+        }
+        cei = cei.replace(/[^\d]+/g, '');
+         // Formato CEI (12 digitos): EE.NNN.NNNNN-AD
+         // EE - Número
+         // NNNNNNNN - Número
+         // A - Atividade
+         // D - Dígito Verificador
+        if (cei.length === 12) {
+            // Multiplicar os primeiros 11 algarismos pelos seus respectivos pesos.
+            // Somar todos os produtos obtidos.
+            let pesos = [7, 4, 1, 8, 5, 2, 1, 6, 3, 7, 4];
+            let numeros = cei.substring(0, 12);
+            let soma = 0;
+            for (let i = 0; i < 11; i++) {
+                soma = soma + (pesos[i] * numeros[i]);
+            }
+            // Com a SOMA obtida, somar o algarismo da unidade com o algarismo da dezena.
+            soma = soma.toString();
+            let somaTam = soma.length;
+            soma = soma.substring(0, somaTam);
+            let total = parseInt(soma.charAt(somaTam - 2)) + parseInt(soma.charAt(somaTam - 1));
+            // Subtrair 10 o algarismo da unidade obtido no TOTAL anterior.
+            total = total.toString();
+            total = total.substring(0, total.length);
+            let resultado = 10 - parseInt(total.charAt(total.length - 1));
+            // O algarismo da unidade do resultado da subtração será o digito verificador.
+            resultado = resultado.toString();
+            resultado = resultado.substring(0, resultado.length);
+            
+            if (numeros[11] === resultado[resultado.length - 1]) {
+                return true;
+            }
+            
+            return false;
+        } else {
+            return false;
+        }
+    },
 };
 
 module.exports = Validations;
