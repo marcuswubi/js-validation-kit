@@ -1,2 +1,2 @@
-# js-validation-kit
- A javascript validation kit for data.
+# js-helpers
+ A javascript helpers kit.
