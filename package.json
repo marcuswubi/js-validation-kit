@@ -1,12 +1,14 @@
 {
-  "name": "js-validation-kit",
-  "version": "0.0.2",
-  "description": "Javascript data validation.",
+  "name": "js-helpers",
+  "version": "1.0.0",
+  "description": "Helper kit for development in javascript. Converters, Validations and Utilities.",
   "main": "lib/index.js",
-  "dependencies": {},
+  "dependencies": {
+    "numero-por-extenso": "^1.0.5"
+  },
   "devDependencies": {
     "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
+    "babel-core": "^6.26.3",
     "babel-preset-babili": "^0.1.4",
     "babel-preset-es2015": "^6.24.1"
   },

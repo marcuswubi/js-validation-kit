@@ -1,3 +1,3 @@
-import Validations from './Validations.js';
+var Strings = require('./Strings');
 
-exports.Validations = Validations;
+module.exports = Strings;

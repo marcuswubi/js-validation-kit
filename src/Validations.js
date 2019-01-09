@@ -1,225 +1,31 @@
-// this domain regex matches all domains that have at least one .
-// sadly IPv4 Adresses will be caught too but technically those are valid domains
-// this expression is extracted from the original RFC 5322 mail expression
-// a modification enforces that the tld consists only of characters
-const rxDomain = '(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\\.)+[a-z](?:[a-z-]*[a-z])?';
-// this domain regex matches everythign that could be a domain in intranet
-// that means "localhost" is a valid domain
-const rxNameDomain = '(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?(?:\\.|$))+';
-// strict IPv4 expression which allows 0-255 per oktett
-const rxIPv4 = '(?:(?:[0-1]?\\d{1,2}|2[0-4]\\d|25[0-5])(?:\\.|$)){4}';
-// strict IPv6 expression which allows (and validates) all shortcuts
-const rxIPv6 = '(?:(?:[\\dA-Fa-f]{1,4}(?::|$)){8}' // full adress
-    + '|(?=(?:[^:\\s]|:[^:\\s])*::(?:[^:\\s]|:[^:\\s])*$)' // or min/max one '::'
-    + '[\\dA-Fa-f]{0,4}(?:::?(?:[\\dA-Fa-f]{1,4}|$)){1,6})'; // and short adress
-// this allows domains (also localhost etc) and ip adresses
-const rxWeakDomain = '(?:' + [rxNameDomain, rxIPv4, rxIPv6].join('|') + ')';
-
-const regEx = {
-    // We use the RegExp suggested by W3C in http://www.w3.org/TR/html5/forms.html#valid-e-mail-address
-    // This is probably the same logic used by most browsers when type=email, which is our goal. It is
-    // a very permissive expression. Some apps may wish to be more strict and can write their own RegExp.
-    Email: /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$/,
-    // Like Email but requires the TLD (.com, etc)
-    EmailWithTLD: /^[a-zA-Z0-9.!#$%&'*+\/=?^_`{|}~-]+(?:\.[A-z0-9!#$%&'*+\/=?^_`{|}~-]+)*@(?:[A-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[A-z0-9]{2,}(?:[a-z0-9-]*[a-z0-9])?$/,
-
-    Domain: new RegExp('^' + rxDomain + '$'),
-    WeakDomain: new RegExp('^' + rxWeakDomain + '$'),
-
-    IP: new RegExp('^(?:' + rxIPv4 + '|' + rxIPv6 + ')$'),
-    IPv4: new RegExp('^' + rxIPv4 + '$'),
-    IPv6: new RegExp('^' + rxIPv6 + '$'),
-    // URL RegEx from https://gist.github.com/dperini/729294
-    // http://mathiasbynens.be/demo/url-regex
-    Url: /^(?:(?:https?|ftp):\/\/)(?:\S+(?::\S*)?@)?(?:(?!10(?:\.\d{1,3}){3})(?!127(?:\.\d{1,3}){3})(?!169\.254(?:\.\d{1,3}){2})(?!192\.168(?:\.\d{1,3}){2})(?!172\.(?:1[6-9]|2\d|3[0-1])(?:\.\d{1,3}){2})(?:[1-9]\d?|1\d\d|2[01]\d|22[0-3])(?:\.(?:1?\d{1,2}|2[0-4]\d|25[0-5])){2}(?:\.(?:[1-9]\d?|1\d\d|2[0-4]\d|25[0-4]))|(?:(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)(?:\.(?:[a-z\u00a1-\uffff0-9]+-?)*[a-z\u00a1-\uffff0-9]+)*(?:\.(?:[a-z\u00a1-\uffff]{2,})))(?::\d{2,5})?(?:\/[^\s]*)?$/i,
-    // unique id from the random package also used by minimongo
-    // character list: https://github.com/meteor/meteor/blob/release/0.8.0/packages/random/random.js#L88
-    // string length: https://github.com/meteor/meteor/blob/release/0.8.0/packages/random/random.js#L143
-    Id: /^[23456789ABCDEFGHJKLMNPQRSTWXYZabcdefghijkmnopqrstuvwxyz]{17}$/,
-    // allows for a 5 digit zip code followed by a whitespace or dash and then 4 more digits
-    // matches 11111 and 11111-1111 and 11111 1111
-    ZipCode: /^\d{5}(?:[-\s]\d{4})?$/,
-    // taken from Google's libphonenumber library
-    // https://github.com/googlei18n/libphonenumber/blob/master/javascript/i18n/phonenumbers/phonenumberutil.js
-    // reference the VALID_PHONE_NUMBER_PATTERN key
-    // allows for common phone number symbols including + () and -
-    Phone: /^[0-9０-９٠-٩۰-۹]{2}$|^[+＋]*(?:[-x‐-―−ー－-／  ­​⁠　()（）［］.\[\]/~⁓∼～*]*[0-9０-９٠-٩۰-۹]){3,}[-x‐-―−ー－-／  ­​⁠　()（）［］.\[\]/~⁓∼～0-9０-９٠-٩۰-۹]*(?:;ext=([0-9０-９٠-٩۰-۹]{1,7})|[  \t,]*(?:e?xt(?:ensi(?:ó?|ó))?n?|ｅ?ｘｔｎ?|[,xｘ#＃~～]|int|anexo|ｉｎｔ)[:\.．]?[  \t,-]*([0-9０-９٠-٩۰-۹]{1,7})#?|[- ]+([0-9０-９٠-٩۰-۹]{1,5})#)?$/i // eslint-disable-line no-irregular-whitespace
-};
+var regEx = require('./lib/Regex');
 
 const Validations = {
-    /**
-     * @param value
-     * @param regexp
-     * @returns {boolean|*}
-     */
     matchRegexp: (value, regexp) => {
         const validationRegexp = (regexp instanceof RegExp ? regexp : (new RegExp(regexp)));
         return (!Validations.isset(value) || Validations.isEmpty(value) || validationRegexp.test(value));
     },
-
-    /**
-     * @param value
-     * @returns {boolean}
-     */
-    isset: value => {
-        return value !== null && value !== undefined;
-    },
-
-    /**
-     * @param value
-     * @returns {boolean}
-     */
-    isEmpty: value => {
-        return value === '' || value === undefined || value == null;
-    },
-
-    /**
-     * @param value
-     * @returns {boolean}
-     */
-    isEmptyTrimed: value => {
-        if (typeof value === 'string') {
-            return value.trim() === '';
-        }
-        return true;
-    },
-
-    /**
-     * @param value
-     * @returns {*}
-     */
+    isset: value => value !== null && value !== undefined && value !== "",
+    isEmpty: value => value === '' || value === undefined || value == null,
+    isEmptyTrimed: value => value.trim() === '',
     isUrl: value => Validations.matchRegexp(value, regEx.Url),
-
-    /**
-     *
-     * @param value
-     * @returns {*}
-     */
     isDomain: value => Validations.matchRegexp(value, regEx.Domain),
-
-    /**
-     *
-     * @param value
-     * @returns {*}
-     */
     isWeakDomain: value => Validations.matchRegexp(value, regEx.WeakDomain),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isEmail: value => Validations.matchRegexp(value, regEx.Email),
-
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isEmailWithTLD: value => Validations.matchRegexp(value, regEx.EmailWithTLD),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isIP: value => Validations.matchRegexp(value, regEx.IP),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isIPv4: value => Validations.matchRegexp(value, regEx.IPv4),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isIPv6: value => Validations.matchRegexp(value, regEx.IPv6),
-
-    /**
-     * @param value
-     * @returns {boolean}
-     */
-    required: value => !Validations.isEmpty(value),
-
-    /**
-     * @param value
-     * @returns {boolean}
-     */
-    trim: value => !Validations.isEmptyTrimed(value),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isNumber: value => Validations.matchRegexp(value, /^-?[0-9]\d*(\d+)?$/i),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isFloat: value => Validations.matchRegexp(value, /^(?:[1-9]\d*|0)?(?:\.\d+)?$/i),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
-    isPositive: (value) => {
-        if (Validations.isset(value)) {
-            return (Validations.isNumber(value) || Validations.isFloat(value)) && value >= 0;
-        }
-        return true;
-    },
-
-    /**
-     * @param value
-     * @param max
-     * @returns {boolean|*}
-     */
+    isPositive: (value) => (Validations.isNumber(value) || Validations.isFloat(value)) && value >= 0,
     maxNumber: (value, max) => !Validations.isset(value) || Validations.isEmpty(value) || parseInt(value, 10) <= parseInt(max, 10),
-
-    /**
-     * @param value
-     * @param min
-     * @returns {boolean|*}
-     */
     minNumber: (value, min) => !Validations.isset(value) || Validations.isEmpty(value) || parseInt(value, 10) >= parseInt(min, 10),
-
-    /**
-     * @param value
-     * @returns {boolean}
-     */
     isString: value => !Validations.isEmpty(value) || typeof value === 'string' || value instanceof String,
-
-    /**
-     * @param value
-     * @param length
-     * @returns {*|boolean}
-     */
     minStringLength: (value, length) => Validations.isString(value) || value.length >= length,
-
-    /**
-     * @param value
-     * @param length
-     * @returns {*|boolean}
-     */
     maxStringLength: (value, length) => Validations.isString(value) || value.length <= length,
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isMongoID: value => Validations.matchRegexp(value, regEx.Id),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isCep: value => Validations.matchRegexp(value, /\d{2}\.\d{3}-\d{3}/),
-
-    /**
-     * @param value
-     * @returns {*}
-     */
     isUf: value => {
         const uf = value;
         const allUf = [
@@ -265,11 +71,6 @@ const Validations = {
 
         return ufValida;
     },
-
-    /**
-     * @param cpf
-     * @returns {boolean}
-     */
     isCpf: cpf => {
         let soma = 0;
         let resto;
@@ -288,11 +89,6 @@ const Validations = {
         if ((resto === 10) || (resto === 11)) resto = 0;
         return resto === parseInt(cpf.substring(10, 11));
     },
-
-    /**
-     * @param cnpj
-     * @returns {boolean}
-     */
     isCnpj: cnpj => {
         cnpj = cnpj.replace(/[^\d]+/g, '');
 
@@ -341,11 +137,6 @@ const Validations = {
         resultado = soma % 11 < 2 ? 0 : 11 - soma % 11;
         return resultado === digitos.charAt(1);
     },
-
-    /**
-     * @param cei
-     * @returns {boolean}
-     */
     validateCEI = function (cei) {
         if (!cei) {
             return false;
