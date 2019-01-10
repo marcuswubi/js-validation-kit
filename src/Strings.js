@@ -102,6 +102,77 @@ const Strings = {
 	remove_char_right: (string, quant) => string.substring(0, string.length - quant),
 	//normal, monetario, porcentagem
 	integer_to_word_pt: (integer, formatAs = 'normal') => npe.porExtenso(integer, formatAs),
+	to_integer: string => string.replace(/[^0-9]+/gi, ''),
+	to_alpha_numeric: string => string.replace(/[^a-z0-9]+/gi, ''),
+	str_pad_left: (string, padSize, char) => {
+		for (let i = 0; i < padSize; i++) {
+			string = `${char}${string}`;
+		}
+		return string;
+	},
+	str_pad_right: (string, padSize, char) => {
+		for (let i = 0; i < padSize; i++) {
+			string = `${string}${char}`;
+		}
+		return string;
+	},
+	to_url: name => {
+		let r = name.toLowerCase();
+
+		r = r.replace(new RegExp('\\s', 'g'), ''); // "branco" - espaço, quebra de linha, tabs etc.; o mesmo que [ \t\n\r\f\v].
+		r = r.replace(new RegExp('[àáâãäå]', 'g'), 'a');
+		r = r.replace(new RegExp('æ', 'g'), 'ae');
+		r = r.replace(new RegExp('ç', 'g'), 'c');
+		r = r.replace(new RegExp('[èéêë]', 'g'), 'e');
+		r = r.replace(new RegExp('[ìíîï]', 'g'), 'i');
+		r = r.replace(new RegExp('ñ', 'g'), 'n');
+		r = r.replace(new RegExp('[òóôõö]', 'g'), 'o');
+		r = r.replace(new RegExp('œ', 'g'), 'oe');
+		r = r.replace(new RegExp('[ùúûü]', 'g'), 'u');
+		r = r.replace(new RegExp('[ýÿ]', 'g'), 'y');
+		r = r.replace(new RegExp('\\W', 'g'), ''); // "não-alfanumérico" - o complemento de \w
+
+		return r.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+	},
+	to_file_name: name => {
+		let r = name.toLowerCase();
+
+		let extension = r.split('.').pop();
+		r = r.slice(0, -extension.length);
+
+		r = r.replace(new RegExp('\\s', 'g'), ''); // "branco" - espaço, quebra de linha, tabs etc.; o mesmo que [ \t\n\r\f\v].
+		r = r.replace(new RegExp('[àáâãäå]', 'g'), 'a');
+		r = r.replace(new RegExp('æ', 'g'), 'ae');
+		r = r.replace(new RegExp('ç', 'g'), 'c');
+		r = r.replace(new RegExp('[èéêë]', 'g'), 'e');
+		r = r.replace(new RegExp('[ìíîï]', 'g'), 'i');
+		r = r.replace(new RegExp('ñ', 'g'), 'n');
+		r = r.replace(new RegExp('[òóôõö]', 'g'), 'o');
+		r = r.replace(new RegExp('œ', 'g'), 'oe');
+		r = r.replace(new RegExp('[ùúûü]', 'g'), 'u');
+		r = r.replace(new RegExp('[ýÿ]', 'g'), 'y');
+		r = r.replace(new RegExp('\\W', 'g'), ''); // "não-alfanumérico" - o complemento de \w
+
+		let sanitizedName = r.replace(/[^a-z0-9]/gi, '_').toLowerCase();
+
+		sanitizedName += '.' + extension;
+
+		return sanitizedName;
+	},
+	to_non_acents: string => {
+		if (!string) return '';
+
+		const accents = 'ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
+		const accentsOut = 'rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
+
+		return string
+			.split('')
+			.map(letter => {
+				const accentIndex = accents.indexOf(letter);
+				return accentIndex !== -1 ? accentsOut[accentIndex] : letter;
+			})
+			.join('');
+	},
 };
 
 module.exports = Strings;
