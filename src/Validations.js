@@ -72,10 +72,20 @@ const Validations = {
         return ufValida;
     },
     isCpf: cpf => {
+        if (cpf === '00000000000') return false;
+        if (cpf === '11111111111') return false;
+        if (cpf === '22222222222') return false;
+        if (cpf === '33333333333') return false;
+        if (cpf === '44444444444') return false;
+        if (cpf === '55555555555') return false;
+        if (cpf === '66666666666') return false;
+        if (cpf === '77777777777') return false;
+        if (cpf === '88888888888') return false;
+        if (cpf === '99999999999') return false;
+
         let soma = 0;
         let resto;
 
-        if (cpf === '00000000000') return false;
         for (i = 1; i <= 9; i++) soma = soma + parseInt(cpf.substring(i - 1, i)) * (11 - i);
         resto = (soma * 10) % 11;
 
