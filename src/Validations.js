@@ -71,7 +71,8 @@ const Validations = {
 
         return ufValida;
     },
-    isCpf: cpf => {
+    is_cpf: cpf => {
+        cpf = cpf.replace('.')
         if (cpf === '00000000000') return false;
         if (cpf === '11111111111') return false;
         if (cpf === '22222222222') return false;
@@ -101,13 +102,8 @@ const Validations = {
     },
     isCnpj: cnpj => {
         cnpj = cnpj.replace(/[^\d]+/g, '');
+        if (!cnpj || cnpj.length !== 14) return false;
 
-        if (cnpj === '') return false;
-
-        if (cnpj.length !== 14)
-            return false;
-
-        // Remove common cnpj
         if (cnpj === "00000000000000" ||
             cnpj === "11111111111111" ||
             cnpj === "22222222222222" ||

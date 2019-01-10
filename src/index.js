@@ -1,3 +1,4 @@
-var Strings = require('./Strings');
+const Strings = require("./Strings");
+const Numbers = require("./Numbers");
 
-module.exports = Strings;
+module.exports = { Strings, Numbers };
