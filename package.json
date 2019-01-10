@@ -4,6 +4,7 @@
   "description": "Helper kit for development in javascript. Converters, Validations and Utilities.",
   "main": "lib/index.js",
   "dependencies": {
+    "cpf_cnpj": "^0.2.0",
     "numero-por-extenso": "^1.0.5"
   },
   "devDependencies": {

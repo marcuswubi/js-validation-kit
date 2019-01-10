@@ -1,9 +1,6 @@
 # js-helpers
 Biblioteca javascript para agilizar o desenvolvimento. Utilitários e Facilitadores para escrever a regra de negócio de forma clara e objetiva.
 
-## DEPENDENCIAS:
-
-
 ## DOCUMENTAÇÃO:
 
 ### STRINGS:
@@ -175,3 +172,7 @@ Biblioteca javascript para agilizar o desenvolvimento. Utilitários e Facilitado
 **Resultado**: quatro mil quinhentos e trinta e seis reais
 `Strings.integer_to_word_pt(468321321575263241234, 'monetario');`
 **Resultado**: quatrocentos e sessenta e oito quintilhões trezentos e vinte e um quatrilhões trezentos e vinte e um trilhões quinhentos e setenta e cinco bilhões duzentos e sessenta e três milhões e duzentos e quarenta mil reais
+
+## DEPENDENCIAS:
+* [cpf_cnpj](https://github.com/fnando/cpf_cnpj) - Para gerar, formatar e validar CPF.
+* [numero-por-extenso](https://github.com/LenonBordini/numero-por-extenso) - Para escrever números por extenso.
