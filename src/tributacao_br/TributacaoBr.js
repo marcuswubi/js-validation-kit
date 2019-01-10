@@ -1,5 +1,5 @@
 const TributacaoBr = {
-	format_federal_number: value => {
+	mask_federal_number: value => {
 		value = value.replace(/[^\d]+/g, '');
 		if (!value || !value.length) return value;
 
@@ -14,23 +14,23 @@ const TributacaoBr = {
 				return value;
 		}
 	},
-	format_cnpj: string => {
+	mask_cnpj: string => {
 		if (!validateFederalNumber(string)) return string;
 		return string.replace(/^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2}).*/, '$1.$2.$3/$4-$5');
 	},
-	format_cpf: string => {
+	mask_cpf: string => {
 		if (!validateFederalNumber(string)) return string;
 		return string.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4');
 	},
-	format_cei: string => {
+	mask_cei: string => {
 		if (!validateFederalNumber(string)) return string;
 		return string.replace(/^(\d{2})(\d{3})(\d{3})(\d{3})(\d{1}).*/, '$1.$2.$3.$4-$5');
 	},
-	format_PIS: string => {
+	mask_PIS: string => {
 		if (!validatePIS(string)) return string;
 		return string.replace(/[^\d]+/g, '').replace(/^(\d{3})(\d{5})(\d{2})(\d{1}).*/, '$1.$2.$3-$4');
 	},
-	format_titulo_eleitor: string => {
+	mask_titulo_eleitor: string => {
 		if (!string) return string;
 		return string.replace(/[^\d]+/g, '').replace(/^(\d{10})(\d{2}).*/, '$1/$2');
 	},
@@ -45,6 +45,8 @@ const TributacaoBr = {
 				return validateCEI(value);
 			case 11:
 				return validateCPF(value);
+			default:
+				return false;
 		}
 	},
 	is_cpf: cpf => {
