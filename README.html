@@ -294,6 +294,20 @@ code.language-yaml {
 <strong>Resultado</strong>: cidade<br>
 <code>Strings.singulate_pt(&apos;cidad&#xF5;es&apos;);</code><br>
 <strong>Resultado</strong>: cidad&#xE3;o</p>
+<h4 class="mume-header" id="remove-os-acentos">Remove os acentos</h4>
+
+<p><code>Strings.to_non_acents(&apos;&#x155;&#x154;&#xC0;&#xC1;&#xC2;&#xC3;&#xC4;&#xC5;&#xE0;&#xE1;&#xE2;&#xE3;&#xE4;&#xE5;&#xDF;&#xD2;&#xD3;&#xD4;&#xD5;&#xD5;&#xD6;&#xD8;&#xF2;&#xF3;&#xF4;&#xF5;&#xF6;&#xF8;&#xC8;&#xC9;&#xCA;&#xCB;&#xE8;&#xE9;&#xEA;&#xEB;&#xF0;&#xC7;&#xE7;&#xD0;&#xCC;&#xCD;&#xCE;&#xCF;&#xEC;&#xED;&#xEE;&#xEF;&#xD9;&#xDA;&#xDB;&#xDC;&#xF9;&#xFA;&#xFB;&#xFC;&#xD1;&#xF1;&#x160;&#x161;&#x178;&#xFF;&#xFD;&#x17D;&#x17E;&apos;)</code><br>
+<strong>Resultado</strong>: rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz<br>
+<code>Strings.to_non_acents(&apos;O CORA&#xC7;&#xC3;O &#xC9; DOCE COMO BANANA CARAMELIZADA COM A&#xC7;UCAR.&apos;)</code><br>
+<strong>Resultado</strong>: O CORACAO E DOCE COMO BANANA CARAMELIZADA COM ACUCAR.<br>
+<code>Strings.to_non_acents(&apos;O cora&#xE7;&#xE3;o &#xE9; doce como banana caramelizada com a&#xE7;ucar.&apos;)</code><br>
+<strong>Resultado</strong>: O coracao e doce como banana caramelizada com acucar.</p>
+<h4 class="mume-header" id="converter-em-uma-url">Converter em uma URL</h4>
+
+<p><code>Strings.to_url(&apos;Marcus Vin&#xED;cius Mendes Gon&#xE7;alves&apos;)</code><br>
+<strong>Resultado</strong>: marcus_vinicius_mendes_goncalves<br>
+<code>Strings.to_url(&apos;O CORA&#xC7;&#xC3;O &#xC9; DOCE COMO BANANA CARAMELIZADA COM A&#xC7;UCAR.&apos;)</code><br>
+<strong>Resultado</strong>:  o_coracao_e_doce_como_banana_caramelizada_com_acucar</p>
 <h4 class="mume-header" id="int-para-string">Int para String</h4>
 
 <p><code>Strings.to_integer(&apos;47-segundos&apos;)</code><br>

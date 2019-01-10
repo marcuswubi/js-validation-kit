@@ -64,6 +64,16 @@ console.log(
 	Strings.to_non_acents('O Amor do coração é doce como banana caramelizada com açucar.')
 );
 
+//tratamento para url
+console.log('\n');
+console.log(color, 'TO URL =', 'Marcus Vinícius Mendes Gonçalves', Strings.to_url('Marcus Vinícius Mendes Gonçalves'));
+console.log(
+	color,
+	'TO URL =',
+	'O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.',
+	Strings.to_url('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')
+);
+
 //string to int
 console.log('\n');
 console.log(color, 'STRING TO INT =', '47-segundos', Strings.to_integer('47-segundos'));

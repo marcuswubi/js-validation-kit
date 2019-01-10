@@ -84,11 +84,17 @@ Biblioteca javascript para agilizar o desenvolvimento. Utilitários e Facilitado
 
 #### Remove os acentos
 `Strings.to_non_acents('ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž')`
-**Resultado**: O CORACAO E DOCE COMO BANANA CARAMELIZADA COM ACUCAR.
-`Strings.to_non_acents('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`
 **Resultado**: rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz
-`Strings.to_non_acents('O Amor do coração é doce como banana caramelizada com açucar.')`
-**Resultado**: O Amor do coracao e doce como banana caramelizada com acucar.
+`Strings.to_non_acents('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`
+**Resultado**: O CORACAO E DOCE COMO BANANA CARAMELIZADA COM ACUCAR.
+`Strings.to_non_acents('O coração é doce como banana caramelizada com açucar.')`
+**Resultado**: O coracao e doce como banana caramelizada com acucar.
+
+#### Converter em uma URL
+`Strings.to_url('Marcus Vinícius Mendes Gonçalves')`
+**Resultado**: marcus_vinicius_mendes_goncalves
+`Strings.to_url('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`
+**Resultado**:  o_coracao_e_doce_como_banana_caramelizada_com_acucar
 
 #### Int para String
 `Strings.to_integer('47-segundos')`
