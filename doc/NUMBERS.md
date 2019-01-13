@@ -1,90 +1,116 @@
 ### NUMMBERS:
 
-#### Int para String
+#### - INT PARA STRING
 
-`Strings.to_integer('47-segundos')`
+`Strings.to_integer('47-segundos')`  
 **Resultado**: 47
-`Strings.to_integer('2cachorros5patos')`
+
+`Strings.to_integer('2cachorros5patos')`  
 **Resultado**: 25
 
-#### Inteiro por Extenso
+#### - INTEIRO POR EXTENSO
 
-##### Normal
+##### NORMAL
 
-`Strings.integer_to_word_pt(1);`
+`Strings.integer_to_word_pt(1);`  
 **Resultado**: um
-`Strings.integer_to_word_pt(223);`
+
+`Strings.integer_to_word_pt(223);`  
 **Resultado**: duzentos e vinte e três
-`Strings.integer_to_word_pt(61);`
+
+`Strings.integer_to_word_pt(61);`  
 **Resultado**: sessenta e um
-`Strings.integer_to_word_pt(6546785);`
+
+`Strings.integer_to_word_pt(6546785);`  
 **Resultado**: seis milhões quinhentos e quarenta e seis mil setecentos e oitenta e cinco
-`Strings.integer_to_word_pt(687);`
+
+`Strings.integer_to_word_pt(687);`  
 **Resultado**: seiscentos e oitenta e sete
-`Strings.integer_to_word_pt(1785.5);`
+
+`Strings.integer_to_word_pt(1785.5);`  
 **Resultado**: um mil setecentos e oitenta e cinco vírgula cinco
-`Strings.integer_to_word_pt(0);`
+
+`Strings.integer_to_word_pt(0);`  
 **Resultado**: zero
-`Strings.integer_to_word_pt(0.345);`
+
+`Strings.integer_to_word_pt(0.345);`  
 **Resultado**: zero vírgula trezentos e quarenta e cinco
-`Strings.integer_to_word_pt(14);`
+
+`Strings.integer_to_word_pt(14);`  
 **Resultado**: quatorze
-`Strings.integer_to_word_pt(4536);`
+
+`Strings.integer_to_word_pt(4536);`  
 **Resultado**: quatro mil quinhentos e trinta e seis
-`Strings.integer_to_word_pt(425642368575263241234);`
+
+`Strings.integer_to_word_pt(425642368575263241234);`  
 **Resultado**: quatrocentos e vinte e cinco quintilhões seiscentos e quarenta e dois quatrilhões trezentos e sessenta e oito trilhões quinhentos e setenta e cinco bilhões duzentos e sessenta e três milhões e duzentos mil
 
-##### Porcentagem
+##### PORCENTAGEM
 
-`Strings.integer_to_word_pt(1, 'porcentagem');`
+`Strings.integer_to_word_pt(1, 'porcentagem');`  
 **Resultado**: um porcento
-`Strings.integer_to_word_pt(223, 'porcentagem');`
+
+`Strings.integer_to_word_pt(223, 'porcentagem');`  
 **Resultado**: duzentos e vinte e três porcento
-`Strings.integer_to_word_pt(61, 'porcentagem');`
+
+`Strings.integer_to_word_pt(61, 'porcentagem');`  
 **Resultado**: sessenta e um porcento
-`Strings.integer_to_word_pt(6546785, 'porcentagem');`
+
+`Strings.integer_to_word_pt(6546785, 'porcentagem');`  
 **Resultado**: seis milhões quinhentos e quarenta e seis mil setecentos e oitenta e cinco porcento
-`Strings.integer_to_word_pt(687, 'porcentagem');`
+
+`Strings.integer_to_word_pt(687, 'porcentagem');`  
 **Resultado**: seiscentos e oitenta e sete porcento
-`Strings.integer_to_word_pt(1785.5, 'porcentagem');`
+
+`Strings.integer_to_word_pt(1785.5, 'porcentagem');`  
 **Resultado**: um mil setecentos e oitenta e cinco vírgula cinco porcento
-`Strings.integer_to_word_pt(0, 'porcentagem');`
+
+`Strings.integer_to_word_pt(0, 'porcentagem');`  
 **Resultado**: zero porcento
-`Strings.integer_to_word_pt(0.345, 'porcentagem');`
+
+`Strings.integer_to_word_pt(0.345, 'porcentagem');`  
 **Resultado**: zero vírgula trezentos e quarenta e cinco porcento
-`Strings.integer_to_word_pt(14, 'porcentagem');`
+
+`Strings.integer_to_word_pt(14, 'porcentagem');`  
 **Resultado**: quatorze porcento
-`Strings.integer_to_word_pt(4536, 'porcentagem');`
+
+`Strings.integer_to_word_pt(4536, 'porcentagem');`  
 **Resultado**: quatro mil quinhentos e trinta e seis porcento
-`Strings.integer_to_word_pt(4265263241234, 'porcentagem');`
+
+`Strings.integer_to_word_pt(4265263241234, 'porcentagem');`  
 **Resultado**: quatro trilhões duzentos e sessenta e cinco bilhões duzentos e sessenta e três milhões duzentos e quarenta e um mil duzentos e trinta e quatro porcento
 
-##### Monetario
+##### MONETARIO
 
-`Strings.integer_to_word_pt(1, 'monetario');`
+`Strings.integer_to_word_pt(1, 'monetario');`  
 **Resultado**: um real
-`Strings.integer_to_word_pt(223, 'monetario');`
+
+`Strings.integer_to_word_pt(223, 'monetario');`  
 **Resultado**: duzentos e vinte e três reais
-`Strings.integer_to_word_pt(61, 'monetario');`
+
+`Strings.integer_to_word_pt(61, 'monetario');`  
 **Resultado**: sessenta e um reais
-`Strings.integer_to_word_pt(6546785, 'monetario');`
+
+`Strings.integer_to_word_pt(6546785, 'monetario');`  
 **Resultado**: seis milhões quinhentos e quarenta e seis mil setecentos e oitenta e cinco reais
-`Strings.integer_to_word_pt(687, 'monetario');`
+
+`Strings.integer_to_word_pt(687, 'monetario');`  
 **Resultado**: seiscentos e oitenta e sete reais
-`Strings.integer_to_word_pt(1785.5, 'monetario');`
+
+`Strings.integer_to_word_pt(1785.5, 'monetario');`  
 **Resultado**: um mil setecentos e oitenta e cinco reais e cinquenta centavos
-`Strings.integer_to_word_pt(0, 'monetario');`
+
+`Strings.integer_to_word_pt(0, 'monetario');`  
 **Resultado**: zero
-`Strings.integer_to_word_pt(0.345, 'monetario');`
+
+`Strings.integer_to_word_pt(0.345, 'monetario');`  
 **Resultado**: trinta e quatro centavos
-`Strings.integer_to_word_pt(14, 'monetario');`
+
+`Strings.integer_to_word_pt(14, 'monetario');`  
 **Resultado**: quatorze reais
-`Strings.integer_to_word_pt(4536, 'monetario');`
+
+`Strings.integer_to_word_pt(4536, 'monetario');`  
 **Resultado**: quatro mil quinhentos e trinta e seis reais
-`Strings.integer_to_word_pt(468321321575263241234, 'monetario');`
+
+`Strings.integer_to_word_pt(468321321575263241234, 'monetario');`  
 **Resultado**: quatrocentos e sessenta e oito quintilhões trezentos e vinte e um quatrilhões trezentos e vinte e um trilhões quinhentos e setenta e cinco bilhões duzentos e sessenta e três milhões e duzentos e quarenta mil reais
-
-## DEPENDENCIAS:
-
--   [cpf_cnpj](https://github.com/fnando/cpf_cnpj) - Para gerar, formatar e validar CPF.
--   [numero-por-extenso](https://github.com/LenonBordini/numero-por-extenso) - Para escrever números por extenso.
