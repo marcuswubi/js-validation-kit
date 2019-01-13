@@ -4,8 +4,8 @@ Biblioteca javascript para agilizar o desenvolvimento. Utilitários e Facilitado
 
 ## DOCUMENTAÇÃO:
 
--   [STRINGS](https://github.com/maviniciuus/js-helpers/doc/STRINGS.md)
--   [NUMBERS](https://github.com/maviniciuus/js-helpers/doc/NUMBERS.md)
+-   [STRINGS](https://github.com/maviniciuus/js-helpers/blob/master/doc/STRINGS.md)
+-   [NUMBERS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NUMBERS.md)
 
 ## DEPENDENCIAS:
 
