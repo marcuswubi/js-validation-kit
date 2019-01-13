@@ -1,7 +1,64 @@
 const { Strings } = require("../src/index");
 const color = "\x1b[36m%s\x1b[0m";
 
+//validationsstring_size
+console.log(
+  color,
+  "STRING SIZE =",
+  "STRING DEMO",
+  Strings.string_size("STRING DEMO")
+);
+console.log(
+  color,
+  "IS STRING =",
+  "STRING DEMO",
+  Strings.is_string("STRING DEMO")
+);
+console.log(
+  color,
+  "IS MORE =",
+  "STRING DEMO",
+  8,
+  Strings.is_more_than("STRING DEMO", 8)
+);
+console.log(
+  color,
+  "IS MORE =",
+  "STRING DEMO",
+  11,
+  Strings.is_more_than("STRING DEMO", 11)
+);
+console.log(
+  color,
+  "IS MORE OR EQUAL =",
+  "STRING DEMO",
+  11,
+  Strings.is_more_or_equal_than("STRING DEMO", 11)
+);
+console.log(
+  color,
+  "IS LESS =",
+  "STRING DEMO",
+  8,
+  Strings.is_less_than("STRING DEMO", 8)
+);
+console.log(
+  color,
+  "IS LESS =",
+  "STRING DEMO",
+  11,
+  Strings.is_less_than("STRING DEMO", 11)
+);
+console.log(
+  color,
+  "IS LESS OR EQUAL =",
+  "STRING DEMO",
+  11,
+  Strings.is_less_or_equal_than("STRING DEMO", 11)
+);
+
 //case convert
+console.log("\n");
 console.log(
   color,
   "CAPITALIZE =",
@@ -136,13 +193,18 @@ console.log(
 );
 
 //tratamento para url
-console.log('\n');
-console.log(color, 'TO URL =', 'Marcus Vinícius Mendes Gonçalves', Strings.to_url('Marcus Vinícius Mendes Gonçalves'));
+console.log("\n");
 console.log(
-	color,
-	'TO URL =',
-	'O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.',
-	Strings.to_url('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')
+  color,
+  "TO URL =",
+  "Marcus Vinícius Mendes Gonçalves",
+  Strings.to_url("Marcus Vinícius Mendes Gonçalves")
+);
+console.log(
+  color,
+  "TO URL =",
+  "O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.",
+  Strings.to_url("O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.")
 );
 
 //string to int
@@ -158,207 +220,4 @@ console.log(
   "STRING TO INT =",
   "2cachorros5patos",
   Strings.to_integer("2cachorros5patos")
-);
-
-//int to string
-console.log("\n");
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  1,
-  Strings.integer_to_word_pt(1)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  223,
-  Strings.integer_to_word_pt(223)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  61,
-  Strings.integer_to_word_pt(61)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  6546785,
-  Strings.integer_to_word_pt(6546785)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  687,
-  Strings.integer_to_word_pt(687)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  1785.5,
-  Strings.integer_to_word_pt(1785.5)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  0,
-  Strings.integer_to_word_pt(0)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  0.345,
-  Strings.integer_to_word_pt(0.345)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  14,
-  Strings.integer_to_word_pt(14)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL =",
-  4536,
-  Strings.integer_to_word_pt(4536)
-);
-console.log(
-  color,
-  "INT TO STRING - NORMAL=",
-  425642368575263241234,
-  Strings.integer_to_word_pt(425642368575263241234)
-);
-console.log("\n");
-console.log(
-  color,
-  "INT TO STRING - % =",
-  1,
-  Strings.integer_to_word_pt(1, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  223,
-  Strings.integer_to_word_pt(223, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  61,
-  Strings.integer_to_word_pt(61, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  6546785,
-  Strings.integer_to_word_pt(6546785, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  687,
-  Strings.integer_to_word_pt(687, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  1785.5,
-  Strings.integer_to_word_pt(1785.5, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  0,
-  Strings.integer_to_word_pt(0, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  0.345,
-  Strings.integer_to_word_pt(0.345, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  14,
-  Strings.integer_to_word_pt(14, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  4536,
-  Strings.integer_to_word_pt(4536, "porcentagem")
-);
-console.log(
-  color,
-  "INT TO STRING - % =",
-  4265263241234,
-  Strings.integer_to_word_pt(4265263241234, "porcentagem")
-);
-console.log("\n");
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  1,
-  Strings.integer_to_word_pt(1, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  223,
-  Strings.integer_to_word_pt(223, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  61,
-  Strings.integer_to_word_pt(61, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  6546785,
-  Strings.integer_to_word_pt(6546785, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  687,
-  Strings.integer_to_word_pt(687, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  1785.5,
-  Strings.integer_to_word_pt(1785.5, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  0,
-  Strings.integer_to_word_pt(0, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  0.345,
-  Strings.integer_to_word_pt(0.345, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  14,
-  Strings.integer_to_word_pt(14, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  4536,
-  Strings.integer_to_word_pt(4536, "monetario")
-);
-console.log(
-  color,
-  "INT TO STRING - $ =",
-  4256423683213215752,
-  Strings.integer_to_word_pt(4683213215752, "monetario")
 );
