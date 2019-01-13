@@ -128,6 +128,13 @@ const Strings = {
     }
     return string;
   },
+  str_pad_both: (string, padSize, char_1, char_2) => {
+    return Strings.str_pad_right(
+      Strings.str_pad_left(string, padSize, char_1),
+      padSize,
+      char_2
+    );
+  },
   to_url: name => {
     return Strings.to_non_acents(name)
       .trim()

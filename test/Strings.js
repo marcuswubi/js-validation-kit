@@ -67,121 +67,158 @@ describe("Strings", function() {
       assert.equal(Strings.remove_char_right("BANANA;", 1), "BANANA");
     });
   });
+  describe("ADICIONAR CARACTERES NO INICIO", function() {
+    const value = ".234890",
+      expected = "00000.234890",
+      modifier_1 = 5,
+      modifier_2 = "0";
+
+    it(`'${value}' ao adicionar '${modifier_1}' '${modifier_2}' no inicio deve retornar '${expected}'`, function() {
+      assert.equal(
+        Strings.str_pad_left(value, modifier_1, modifier_2),
+        expected
+      );
+    });
+  });
+  describe("ADICIONAR CARACTERES NO FINAL", function() {
+    const value = "20",
+      expected = "20% aproximadamente",
+      modifier_1 = 1,
+      modifier_2 = "% aproximadamente";
+
+    it(`'${value}' ao adicionar '${modifier_1}' '${modifier_2}' no final deve retornar '${expected}'`, function() {
+      assert.equal(
+        Strings.str_pad_right(value, modifier_1, modifier_2),
+        expected
+      );
+    });
+  });
+  describe("ADICIONAR CARACTERES EM AMBOS", function() {
+    const value = "Nome do Autor",
+      expected = "(Nome do Autor)",
+      modifier_1 = 1,
+      modifier_2 = "(",
+      modifier_3 = ")";
+
+    it(`'${value}' ao adicionar '${modifier_1}' '${modifier_2}' no final deve retornar '${expected}'`, function() {
+      assert.equal(
+        Strings.str_pad_both(value, modifier_1, modifier_2, modifier_3),
+        expected
+      );
+    });
+  });
+  describe("PLURALIZAR", function() {
+    const value = "qualquer",
+      expected = "quaisquer";
+
+    it(`'${value}' ao pluralizar '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.pluralize_pt(value), expected);
+    });
+  });
+  describe("PLURALIZAR", function() {
+    const value = "cidadão",
+      expected = "cidadões";
+
+    it(`'${value}' ao pluralizar '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.pluralize_pt(value), expected);
+    });
+  });
+  describe("PLURALIZAR", function() {
+    const value = "qualquer",
+      expected = "quaisquer";
+
+    it(`'${value}' ao pluralizar '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.pluralize_pt(value), expected);
+    });
+  });
+  describe("SINGULARIZAR", function() {
+    const value = "canetas",
+      expected = "caneta";
+
+    it(`'${value}' ao singularizar '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.singulate_pt(value), expected);
+    });
+  });
+  describe("SINGULARIZAR", function() {
+    const value = "pessoas",
+      expected = "pessoa";
+
+    it(`'${value}' ao singularizar '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.singulate_pt(value), expected);
+    });
+  });
+  describe("SINGULARIZAR", function() {
+    const value = "cidadões",
+      expected = "cidadão";
+
+    it(`'${value}' ao singularizar '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.singulate_pt(value), expected);
+    });
+  });
+  describe("SINGULARIZAR", function() {
+    const value = "quaisquer",
+      expected = "qualquer";
+
+    it(`'${value}' ao singularizar '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.singulate_pt(value), expected);
+    });
+  });
+  describe("REMOVER ACENTOS", function() {
+    const value =
+        "ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž",
+      expected =
+        "rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz";
+
+    it(`'${value}' ao remover acentos '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.to_non_acents(value), expected);
+    });
+  });
+  describe("REMOVER ACENTOS", function() {
+    const value = "O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.",
+      expected = "O CORACAO E DOCE COMO BANANA CARAMELIZADA COM ACUCAR.";
+
+    it(`'${value}' ao remover acentos '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.to_non_acents(value), expected);
+    });
+  });
+  describe("REMOVER ACENTOS", function() {
+    const value = "O coração é doce como banana caramelizada com açucar.",
+      expected = "O coracao e doce como banana caramelizada com acucar.";
+
+    it(`'${value}' ao remover acentos '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.to_non_acents(value), expected);
+    });
+  });
+  describe("CONVERTER EM VALOR PARA URL", function() {
+    const value = "Marcus Vinícius Mendes Gonçalves",
+      expected = "marcus_vinicius_mendes_goncalves";
+
+    it(`'${value}' ao converter em 'url' '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.to_url(value), expected);
+    });
+  });
+  describe("CONVERTER EM VALOR PARA URL", function() {
+    const value = "O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.",
+      expected = "o_coracao_e_doce_como_banana_caramelizada_com_acucar";
+
+    it(`'${value}' ao converter em 'url' '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.to_url(value), expected);
+    });
+  });
+  describe("STRING PARA INTEIRO", function() {
+    const value = "47-segundos",
+      expected = 47;
+
+    it(`'${value}' ao converter em 'inteiro' '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.to_integer(value), expected);
+    });
+  });
+  describe("STRING PARA INTEIRO", function() {
+    const value = "2cachorros5patos",
+      expected = 25;
+
+    it(`'${value}' ao converter em 'inteiro' '${value}' deve retornar '${expected}'`, function() {
+      assert.equal(Strings.to_integer(value), expected);
+    });
+  });
 });
-
-// //concatena caracteres
-// console.log("\n");
-// console.log(color, "STR-PAD-LEFT =", Strings.str_pad_left(".234890", 5, "0"));
-// console.log(color, "STR-PAD-LEFT =", Strings.str_pad_left(".234890", 5, "X"));
-// console.log(color, "STR-PAD-LEFT =", Strings.str_pad_left(".234890", 5, "-"));
-// console.log(color, "STR-PAD-RIGHT =", Strings.str_pad_right("522", 5, "0"));
-// console.log(color, "STR-PAD-RIGHT =", Strings.str_pad_right("522", 5, "X"));
-// console.log(color, "STR-PAD-RIGHT =", Strings.str_pad_right("522", 5, "-"));
-
-// //pluralize
-// console.log("\n");
-// console.log(color, "PLURALIZE-pt =", "caneta", Strings.pluralize_pt("caneta"));
-// console.log(color, "PLURALIZE-pt =", "pessoa", Strings.pluralize_pt("pessoa"));
-// console.log(
-//   color,
-//   "PLURALIZE-pt =",
-//   "qualquer",
-//   Strings.pluralize_pt("qualquer")
-// );
-// console.log(color, "PLURALIZE-pt =", "mão", Strings.pluralize_pt("mão"));
-// console.log(color, "PLURALIZE-pt =", "cidade", Strings.pluralize_pt("cidade"));
-// console.log(
-//   color,
-//   "PLURALIZE-pt =",
-//   "cidadão",
-//   Strings.pluralize_pt("cidadão")
-// );
-
-// //singulate
-// console.log("\n");
-// console.log(
-//   color,
-//   "SINGULATE-pt =",
-//   "canetas",
-//   Strings.singulate_pt("canetas")
-// );
-// console.log(
-//   color,
-//   "SINGULATE-pt =",
-//   "pessoas",
-//   Strings.singulate_pt("pessoas")
-// );
-// console.log(
-//   color,
-//   "SINGULATE-pt =",
-//   "quaisquer",
-//   Strings.singulate_pt("quaisquer")
-// );
-// console.log(color, "SINGULATE-pt =", "mãos", Strings.singulate_pt("mãos"));
-// console.log(
-//   color,
-//   "SINGULATE-pt =",
-//   "cidades",
-//   Strings.singulate_pt("cidades")
-// );
-// console.log(
-//   color,
-//   "SINGULATE-pt =",
-//   "cidadões",
-//   Strings.singulate_pt("cidadões")
-// );
-
-// //remove os acentos
-// console.log("\n");
-// console.log(
-//   color,
-//   "TO NON ACENTS =",
-//   "ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž",
-//   Strings.to_non_acents(
-//     "ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž"
-//   )
-// );
-// console.log(
-//   color,
-//   "TO NON ACENTS =",
-//   "O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.",
-//   Strings.to_non_acents("O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.")
-// );
-// console.log(
-//   color,
-//   "TO NON ACENTS =",
-//   "O coração é doce como banana caramelizada com açucar.",
-//   Strings.to_non_acents(
-//     "O Amor do coração é doce como banana caramelizada com açucar."
-//   )
-// );
-
-// //tratamento para url
-// console.log("\n");
-// console.log(
-//   color,
-//   "TO URL =",
-//   "Marcus Vinícius Mendes Gonçalves",
-//   Strings.to_url("Marcus Vinícius Mendes Gonçalves")
-// );
-// console.log(
-//   color,
-//   "TO URL =",
-//   "O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.",
-//   Strings.to_url("O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.")
-// );
-
-// //string to int
-// console.log("\n");
-// console.log(
-//   color,
-//   "STRING TO INT =",
-//   "47-segundos",
-//   Strings.to_integer("47-segundos")
-// );
-// console.log(
-//   color,
-//   "STRING TO INT =",
-//   "2cachorros5patos",
-//   Strings.to_integer("2cachorros5patos")
-// );

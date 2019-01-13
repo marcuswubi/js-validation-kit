@@ -10,7 +10,7 @@ const TributacaoBr = {
   },
   unmask_cpf: cpf => cpf.replace(/[^\d]+/g, ""),
   mask_cpf: string => {
-    if (!is_cpf(string)) return string;
+    if (!TributacaoBr.is_cpf(string)) return string;
     return string.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, "$1.$2.$3-$4");
   },
   gen_cnpj: (formatted = true) => {
@@ -21,7 +21,7 @@ const TributacaoBr = {
   },
   unmask_cnpj: cnpj => cnpj.replace(/[^\d]+/g, ""),
   mask_cnpj: string => {
-    if (!is_cnpj(string)) return string;
+    if (!TributacaoBr.is_cnpj(string)) return string;
     return string.replace(
       /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2}).*/,
       "$1.$2.$3/$4-$5"
@@ -57,7 +57,7 @@ const TributacaoBr = {
   },
   unmask_cei: cei => cei.replace(/[^\d]+/g, ""),
   mask_cei: string => {
-    if (!is_cei(string)) return string;
+    if (!TributacaoBr.is_cei(string)) return string;
     return string.replace(
       /^(\d{2})(\d{3})(\d{3})(\d{3})(\d{1}).*/,
       "$1.$2.$3.$4-$5"
