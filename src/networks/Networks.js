@@ -3,7 +3,8 @@ const RgxPresets = require("./../regexs/RgxPresets");
 
 const Networks = {
   is_url: val => Regex.match_regexp(val, RgxPresets.Url),
-  is_domain: val => Regex.match_regexp(val, RgxPresets.Domain),
+  is_domain: val =>
+    Regex.match_regexp(val.replace(/(^\w+:|^)\/\//, ""), RgxPresets.Domain),
   is_weak_domain: val => Regex.match_regexp(val, RgxPresets.WeakDomain),
   is_email: val => Regex.match_regexp(val, RgxPresets.Email),
   is_email_with_tld: val => Regexs.match_regexp(val, RgxPresets.EmailWithTLD),
