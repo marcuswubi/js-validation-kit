@@ -3,86 +3,127 @@
 #### Capitalize
 
 `Strings.capitalize('string lowercase virou capitalize');`
+
 **Resultado**: String lowercase virou capitalize
 
 #### Uppercase
 
 `Strings.uppercase('string lowercase virou uppercase');`
+
 **Resultado**: STRING LOWERCASE VIROU UPPERCASE
 
 #### Lowercase
 
 `Strings.lowercase('STRING UPPERCASE VIROU LOWERCASE');`
+
 **Resultado**: string uppercase virou lowercase
 
 #### String começa com
 
 `Strings.starts_with('banana', 'bana');`
+
 **Resultado**: true
 
 #### String termina com
 
 `Strings.ends_with('banana', ana');`
+
 **Resultado**: true
 
 #### Remove carácteres do início
 
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`
+
 **Resultado**: emover 1 caracter do inicio
 
 #### Remove carácteres do final
 
 `Strings.remove_char_right('remover 3 caracteres do final', 3);`
+
 **Resultado**: remover 3 caracteres do fi
 
 #### Concatena carácteres no início
 
 `Strings.str_pad_left('.234890', 5, '0')`
+
 **Resultado**: 00000.234890
+
 `Strings.str_pad_left('.234890', 5, 'X')`
+
 **Resultado**: XXXXX.234890
+
 `Strings.str_pad_left('.234890', 5, '-')`
+
 **Resultado**: -----.234890
+
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`
+
 **Resultado**: emover 1 caracter do inicio
 
 #### Concatena carácteres no final
 
 `Strings.str_pad_right('522', 5, '0')`
+
 **Resultado**: 52200000
+
 `Strings.str_pad_right('522', 4, 'X')`
+
 **Resultado**: 522XXXX
+
 `Strings.str_pad_right('522', 3, '-')`
+
 **Resultado**: 522---
 
 #### Plural pt-BR
 
 `Strings.pluralize_pt('caneta');`
+
 **Resultado**: canetas
+
 `Strings.pluralize_pt('pessoa');`
+
 **Resultado**: pessoas
+
 `Strings.pluralize_pt('qualquer');`
+
 **Resultado**: quaisquer
+
 `Strings.pluralize_pt('mão');`
+
 **Resultado**: mãos
+
 `Strings.pluralize_pt('cidade');`
+
 **Resultado**: cidades
+
 `Strings.pluralize_pt('cidadão');`
+
 **Resultado**: cidadões
 
 #### Singular pt-BR
 
 `Strings.singulate_pt('canetas');`
+
 **Resultado**: caneta
+
 `Strings.singulate_pt('pessoas');`
+
 **Resultado**: pessoa
+
 `Strings.singulate_pt('quaisquer');`
+
 **Resultado**: qualquer
+
 `Strings.singulate_pt('mãos');`
+
 **Resultado**: mão
+
 `Strings.singulate_pt('cidades');`
+
 **Resultado**: cidade
+
 `Strings.singulate_pt('cidadões');`
+
 **Resultado**: cidadão
 
 #### Remove os acentos
