@@ -1,27 +1,24 @@
 ### STRINGS:
 
-#### Capitalize
+#### - _CAPITALIZE_
 
-`Strings.capitalize('string lowercase virou capitalize');`
-
+`Strings.capitalize('string lowercase virou capitalize');`  
 **Resultado**: String lowercase virou capitalize
 
-#### -UPPERCASE
+#### - _UPPERCASE_
 
-`Strings.uppercase('string lowercase virou uppercase');`
-
+`Strings.uppercase('string lowercase virou uppercase');`  
 **Resultado**: STRING LOWERCASE VIROU UPPERCASE
 
-#### - LOWERCASE
+#### - _LOWERCASE_
 
 `Strings.lowercase('STRING UPPERCASE VIROU LOWERCASE');`
 
 **Resultado**: string uppercase virou lowercase
 
-#### - STRING COMEÇA COM
+#### - _STRING COMEÇA COM_
 
-`Strings.starts_with('banana', 'bana');`
-
+`Strings.starts_with('banana', 'bana');`  
 **Resultado**: true
 
 #### - STRING TERMINA COM
@@ -287,7 +284,6 @@
 `Strings.integer_to_word_pt(0.345, 'monetario');`
 
 **Resultado**: trinta e quatro centavos
-
 `Strings.integer_to_word_pt(14, 'monetario');`
 
 **Resultado**: quatorze reais
