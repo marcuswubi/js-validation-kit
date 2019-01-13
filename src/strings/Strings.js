@@ -9,7 +9,7 @@ const Strings = {
   is_more_or_equal_than: (value, length) => value.length >= length,
   lowercase: str => (str ? str.toLowerCase() : str),
   uppercase: str => (str ? str.toUpperCase() : str),
-  capitalize: str => (str ? str.replace(/^\w/, c => c.toUpperCase()) : str),
+  capitalize: s => s.toLowerCase().replace(/^\w/, c => c.toUpperCase()),
   pluralize_exceptions_pt: () => {
     return {
       cidadão: "cidadões",
