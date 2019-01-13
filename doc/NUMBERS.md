@@ -1,3 +1,8 @@
+## DOCUMENTAÇÃO:
+
+-   [STRINGS](https://github.com/maviniciuus/js-helpers/blob/master/doc/STRINGS.md)
+-   [NUMBERS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NUMBERS.md)
+
 ### NUMMBERS:
 
 #### - INT PARA STRING
