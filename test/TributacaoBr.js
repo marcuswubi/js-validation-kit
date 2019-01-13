@@ -8,8 +8,14 @@ describe("TributacaoBr", function() {
       assert.notEqual(cpf, undefined);
     });
   });
+  describe("GERADOR CPF", function() {
+    const cpf = TributacaoBr.gen_cpf();
+    it(`deve gerar um cpf: '${cpf} com 14 caracteres' `, function() {
+      assert.equal(cpf.length, 14);
+    });
+  });
   describe("DEVE SER UM CPF VALIDO", function() {
-    const value = "000.504.631-95",
+    const value = TributacaoBr.gen_cpf(),
       expected = true;
 
     it(`'${value}' validar o 'cpf' '${value}' deve retornar '${expected}'`, function() {
@@ -34,9 +40,10 @@ describe("TributacaoBr", function() {
   });
 
   describe("GERADOR CNPJ", function() {
-    const cnpj = TributacaoBr.gen_cpf();
-    it(`deve gerar um cnpj: '${cnpj}' `, function() {
+    const cnpj = TributacaoBr.gen_cnpj();
+    it(`deve gerar um cnpj: '${cnpj}' válido com 18 caracteres`, function() {
       assert.notEqual(cnpj, undefined);
+      assert.equal(cnpj.length, 18);
     });
   });
   describe("DEVE SER UM CNPJ VALIDO", function() {
@@ -64,7 +71,7 @@ describe("TributacaoBr", function() {
     });
   });
 
-  describe("DEVE SER UMA INSCRIÇÃO FEDERAL VALIDA", function() {
+  describe("DEVE SER UMA INSCRIÇÃO FEDERAL VALIDA - CPF", function() {
     const value = "000.504.631-95",
       expected = true;
 
@@ -72,7 +79,7 @@ describe("TributacaoBr", function() {
       assert.equal(TributacaoBr.is_federal_number(value), expected);
     });
   });
-  describe("DEVE SER UMA INSCRIÇÃO FEDERAL VALIDA", function() {
+  describe("DEVE SER UMA INSCRIÇÃO FEDERAL VALIDA - CNPJ", function() {
     const value = "18.808.665/7705-40",
       expected = true;
 
@@ -80,7 +87,7 @@ describe("TributacaoBr", function() {
       assert.equal(TributacaoBr.is_federal_number(value), expected);
     });
   });
-  describe("DEVE MASCARAR A INSCRIÇÃO FEDERAL", function() {
+  describe("DEVE MASCARAR A INSCRIÇÃO FEDERAL - CPF", function() {
     const value = "00050463195",
       expected = "000.504.631-95";
 
@@ -88,7 +95,7 @@ describe("TributacaoBr", function() {
       assert.equal(TributacaoBr.mask_federal_number(value), expected);
     });
   });
-  describe("DEVE MASCARAR A INSCRIÇÃO FEDERAL", function() {
+  describe("DEVE MASCARAR A INSCRIÇÃO FEDERAL - CNPJ", function() {
     const value = "18808665770540",
       expected = "18.808.665/7705-40";
 
@@ -96,7 +103,7 @@ describe("TributacaoBr", function() {
       assert.equal(TributacaoBr.mask_federal_number(value), expected);
     });
   });
-  describe("DEVE REMOVER A MASCARA DA INSCRIÇÃO FEDERAL", function() {
+  describe("DEVE REMOVER A MASCARA DA INSCRIÇÃO FEDERAL - CPF", function() {
     const value = "000.504.631-95",
       expected = "00050463195";
 
@@ -104,7 +111,7 @@ describe("TributacaoBr", function() {
       assert.equal(TributacaoBr.unmask_federal_number(value), expected);
     });
   });
-  describe("DEVE REMOVER A MASCARA DA INSCRIÇÃO FEDERAL", function() {
+  describe("DEVE REMOVER A MASCARA DA INSCRIÇÃO FEDERAL - CNPJ", function() {
     const value = "18.808.665/7705-40",
       expected = "18808665770540";
 

@@ -2,8 +2,8 @@ const npe = require("numero-por-extenso");
 const Regexs = require("./../regexs/Regexs");
 
 const Numbers = {
-  is_int: val => Regexs.match_regexp(val, /^-?[0-9]\d*(\d+)?$/i),
-  is_float: val => Regexs.match_regexp(val, /^(?:[1-9]\d*|0)?(?:\.\d+)?$/i),
+  is_int: n => Number(n) === n && n % 1 === 0,
+  is_float: n => Number(n) === n && n % 1 !== 0,
   is_positive: val =>
     (Numbers.is_int(val) || Numbers.is_float(val)) && val >= 0,
   is_negative: val => (Numbers.is_int(val) || Numbers.is_float(val)) && val < 0,
