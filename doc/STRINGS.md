@@ -6,43 +6,43 @@
 
 **Resultado**: String lowercase virou capitalize
 
-#### Uppercase
+#### -UPPERCASE
 
 `Strings.uppercase('string lowercase virou uppercase');`
 
 **Resultado**: STRING LOWERCASE VIROU UPPERCASE
 
-#### Lowercase
+#### - LOWERCASE
 
 `Strings.lowercase('STRING UPPERCASE VIROU LOWERCASE');`
 
 **Resultado**: string uppercase virou lowercase
 
-#### String começa com
+#### - STRING COMEÇA COM
 
 `Strings.starts_with('banana', 'bana');`
 
 **Resultado**: true
 
-#### String termina com
+#### - STRING TERMINA COM
 
 `Strings.ends_with('banana', ana');`
 
 **Resultado**: true
 
-#### Remove carácteres do início
+#### - REMOVE CARÁCTERES DO INÍCIO
 
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`
 
 **Resultado**: emover 1 caracter do inicio
 
-#### Remove carácteres do final
+#### - REMOVE CARÁCTERES DO FINAL
 
 `Strings.remove_char_right('remover 3 caracteres do final', 3);`
 
 **Resultado**: remover 3 caracteres do fi
 
-#### Concatena carácteres no início
+#### - CONCATENA CARÁCTERES NO INÍCIO
 
 `Strings.str_pad_left('.234890', 5, '0')`
 
@@ -60,7 +60,7 @@
 
 **Resultado**: emover 1 caracter do inicio
 
-#### Concatena carácteres no final
+#### - CONCATENA CARÁCTERES NO FINAL
 
 `Strings.str_pad_right('522', 5, '0')`
 
@@ -74,7 +74,7 @@
 
 **Resultado**: 522---
 
-#### Plural pt-BR
+#### - PLURAL PT-BR
 
 `Strings.pluralize_pt('caneta');`
 
@@ -100,7 +100,7 @@
 
 **Resultado**: cidadões
 
-#### Singular pt-BR
+#### - SINGULAR PT-BR
 
 `Strings.singulate_pt('canetas');`
 
@@ -126,7 +126,7 @@
 
 **Resultado**: cidadão
 
-#### Remove os acentos
+#### - REMOVE OS ACENTOS
 
 `Strings.to_non_acents('ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž')`
 
@@ -140,7 +140,7 @@
 
 **Resultado**: O coracao e doce como banana caramelizada com acucar.
 
-#### Converter em uma URL
+#### - CONVERTER EM UMA URL
 
 `Strings.to_url('Marcus Vinícius Mendes Gonçalves')`
 
@@ -150,7 +150,7 @@
 
 **Resultado**: o_coracao_e_doce_como_banana_caramelizada_com_acucar
 
-#### Int para String
+#### - INT PARA STRING
 
 `Strings.to_integer('47-segundos')`
 
@@ -160,9 +160,9 @@
 
 **Resultado**: 25
 
-#### Inteiro por Extenso
+#### - INTEIRO POR EXTENSO
 
-##### Normal
+##### NORMAL
 
 `Strings.integer_to_word_pt(1);`
 
@@ -208,7 +208,7 @@
 
 **Resultado**: quatrocentos e vinte e cinco quintilhões seiscentos e quarenta e dois quatrilhões trezentos e sessenta e oito trilhões quinhentos e setenta e cinco bilhões duzentos e sessenta e três milhões e duzentos mil
 
-##### Porcentagem
+##### PORCENTAGEM
 
 `Strings.integer_to_word_pt(1, 'porcentagem');`
 
@@ -254,7 +254,7 @@
 
 **Resultado**: quatro trilhões duzentos e sessenta e cinco bilhões duzentos e sessenta e três milhões duzentos e quarenta e um mil duzentos e trinta e quatro porcento
 
-##### Monetario
+##### MONETARIO
 
 `Strings.integer_to_word_pt(1, 'monetario');`
 
