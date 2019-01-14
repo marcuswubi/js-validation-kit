@@ -8,45 +8,46 @@
 -   [REGEXS](https://github.com/maviniciuus/js-helpers/blob/master/doc/REGEXS.md)
 -   [STRINGS](https://github.com/maviniciuus/js-helpers/blob/master/doc/STRINGS.md)
 -   [TRIBUTACAO-BR](https://github.com/maviniciuus/js-helpers/blob/master/doc/TRIBUTACAO-BR.md)
+-   [VALIDATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/VALIDATIONS.md)
 
 ### STRINGS:
 
-#### - _CAPITALIZE_
+#### *- CAPITALIZE*
 
 `Strings.capitalize('string lowercase virou capitalize');`  
 **Resultado**: String lowercase virou capitalize
 
-#### - _UPPERCASE_
+#### *- UPPERCASE*
 
 `Strings.uppercase('string lowercase virou uppercase');`  
 **Resultado**: STRING LOWERCASE VIROU UPPERCASE
 
-#### - _LOWERCASE_
+#### *- LOWERCASE*
 
 `Strings.lowercase('STRING UPPERCASE VIROU LOWERCASE');`  
 **Resultado**: string uppercase virou lowercase
 
-#### - _STRING COMEÇA COM_
+#### *- STRING COMEÇA COM*
 
 `Strings.starts_with('banana', 'bana');`  
 **Resultado**: true
 
-#### - STRING TERMINA COM
+#### *- STRING TERMINA COM*
 
 `Strings.ends_with('banana', ana');`  
 **Resultado**: true
 
-#### - REMOVE CARÁCTERES DO INÍCIO
+#### *- REMOVE CARÁCTERES DO INÍCIO*
 
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
 **Resultado**: emover 1 caracter do inicio
 
-#### - REMOVE CARÁCTERES DO FINAL
+#### *- REMOVE CARÁCTERES DO FINAL*
 
 `Strings.remove_char_right('remover 3 caracteres do final', 3);`  
 **Resultado**: remover 3 caracteres do fi
 
-#### - CONCATENA CARÁCTERES NO INÍCIO
+#### *- CONCATENA CARÁCTERES NO INÍCIO*
 
 `Strings.str_pad_left('.234890', 5, '0')`  
 **Resultado**: 00000.234890
@@ -60,7 +61,7 @@
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
 **Resultado**: emover 1 caracter do inicio
 
-#### - CONCATENA CARÁCTERES NO FINAL
+#### *- CONCATENA CARÁCTERES NO FINAL*
 
 `Strings.str_pad_right('522', 5, '0')`  
 **Resultado**: 52200000
@@ -71,7 +72,7 @@
 `Strings.str_pad_right('522', 3, '-')`  
 **Resultado**: 522---
 
-#### - PLURAL PT-BR
+#### *- PLURAL PT-BR*
 
 `Strings.pluralize_pt('caneta');`  
 **Resultado**: canetas
@@ -91,7 +92,7 @@
 `Strings.pluralize_pt('cidadão');`  
 **Resultado**: cidadões
 
-#### - SINGULAR PT-BR
+#### *- SINGULAR PT-BR*
 
 `Strings.singulate_pt('canetas');`  
 **Resultado**: caneta
@@ -111,7 +112,7 @@
 `Strings.singulate_pt('cidadões');`  
 **Resultado**: cidadão
 
-#### - REMOVE OS ACENTOS
+#### *- REMOVE OS ACENTOS*
 
 `Strings.to_non_acents('ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž')`  
 **Resultado**: rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz
@@ -122,7 +123,7 @@
 `Strings.to_non_acents('O coração é doce como banana caramelizada com açucar.')`  
 **Resultado**: O coracao e doce como banana caramelizada com acucar.
 
-#### - CONVERTER EM UMA URL
+#### *- CONVERTER EM UMA URL*
 
 `Strings.to_url('Marcus Vinícius Mendes Gonçalves')`  
 **Resultado**: marcus_vinicius_mendes_goncalves

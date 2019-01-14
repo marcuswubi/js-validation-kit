@@ -12,7 +12,7 @@
 
 ### NUMBERS:
 
-#### - INT PARA STRING
+#### *- INT PARA STRING*
 
 `Strings.to_integer('47-segundos')`  
 **Resultado**: 47
@@ -20,9 +20,9 @@
 `Strings.to_integer('2cachorros5patos')`  
 **Resultado**: 25
 
-#### - INTEIRO POR EXTENSO
+#### *- INTEIRO POR EXTENSO*
 
-##### NORMAL
+##### *NORMAL*
 
 `Strings.integer_to_word_pt(1);`  
 **Resultado**: um
@@ -57,7 +57,7 @@
 `Strings.integer_to_word_pt(425642368575263241234);`  
 **Resultado**: quatrocentos e vinte e cinco quintilhões seiscentos e quarenta e dois quatrilhões trezentos e sessenta e oito trilhões quinhentos e setenta e cinco bilhões duzentos e sessenta e três milhões e duzentos mil
 
-##### PORCENTAGEM
+##### *PORCENTAGEM*
 
 `Strings.integer_to_word_pt(1, 'porcentagem');`  
 **Resultado**: um porcento
@@ -92,7 +92,7 @@
 `Strings.integer_to_word_pt(4265263241234, 'porcentagem');`  
 **Resultado**: quatro trilhões duzentos e sessenta e cinco bilhões duzentos e sessenta e três milhões duzentos e quarenta e um mil duzentos e trinta e quatro porcento
 
-##### MONETARIO
+##### *MONETARIO*
 
 `Strings.integer_to_word_pt(1, 'monetario');`  
 **Resultado**: um real

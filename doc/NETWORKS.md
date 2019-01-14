@@ -12,7 +12,7 @@
 
 ### NETWORKS
 
-#### IS DOMAIN
+#### *- IS DOMAIN*
 
 `Networks.is_domain("https://acelera.cloud")`  
 **Resultado:** true  
@@ -24,7 +24,7 @@
 **Resultado:** true  
 
 
-#### IS URL
+#### *- IS URL*
 
 `Networks.is_url("http://acelera.cloud/contato")`  
 **Resultado:** true  
@@ -45,7 +45,7 @@
 **Resultado:** false  
 
 
-#### IS EMAIL WITH TLD
+#### *- IS EMAIL WITH TLD*
 
 `Networks.is_email_with_tld("marcus@aceleracloud.com.br")`  
 **Resultado:** true  
@@ -68,7 +68,7 @@
 `Networks.is_email_with_tld("marcus@0")`  
 **Resultado:** true  
 
-#### IS EMAIL WITHOUT TLD
+#### *- IS EMAIL WITHOUT TLD*
 
 `Networks.is_email("marcus@aceleracloud.com.br")`  
 **Resultado:** true  
@@ -92,7 +92,7 @@
 **Resultado:** true  
 
 
-#### IS IP
+#### *- IS IP*
 
 `Networks.is_ip("localhost")`  
 **Resultado:** true  
