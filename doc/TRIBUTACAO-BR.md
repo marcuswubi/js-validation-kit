@@ -11,115 +11,75 @@
 -   [VALIDATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/VALIDATIONS.md)
 
 ### TRIBUTACAO-BR
+ATENÇÃO! Por razões de segurança, o valor real do cpf/cnpj foi trocado por XXX. É uma biblioteca para fins de desenvolvimento e testes apenas.
 
-#### *- GERADOR DE CPF (fins de desenvolvimento e testes)*
+#### CPF
+
+##### *- GERADOR DE CPF (fins de desenvolvimento e testes)*
 
 `TributacaoBr.gen_cpf()`  
-**Resultado**: Ex.: 000.504.631-95  
+**Resultado**: Ex.: 000.504.XXX-95  
 
-#### *- ADICIONA MÁSCARA AO CPF*
+##### *- DEVE SER UM CPF VÁLIDO*
 
-`TributacaoBr.mask_cpf("00050463195")`  
-**Resultado**: Ex.: 000.504.631-95  
+`TributacaoBr.is_cpf("000.504.XXX-95")`  
+**Resultado**: true  
+  
+##### *- ADICIONA MÁSCARA AO CPF*
 
-#### *- REMOVE MÁSCARA DE CPF*
+`TributacaoBr.mask_cpf("000504XXX95")`  
+**Resultado**: Ex.: 000.504.XXX-95  
 
-`TributacaoBr.unmask_cpf("000.504.631-95")`  
-**Resultado**: Ex.: 00050463195  
+##### *- REMOVE MÁSCARA DE CPF*
 
-#### *- GERADOR DE CNPJ (fins de desenvolvimento e testes)*
+`TributacaoBr.unmask_cpf("000.504.XXX-95")`  
+**Resultado**: Ex.: 000504XXX95  
+
+#### CNPJ
+
+##### *- GERADOR DE CNPJ (fins de desenvolvimento e testes)*
 
 `TributacaoBr.gen_cnpj()`  
-**Resultado**: Ex.: 18.808.665/7705-40  
+**Resultado**: Ex.: 18.XXX.665/7705-40  
 
-#### *- ADICIONA MÁSCARA AO CNPJ*
+##### *- DEVE SER UM CNPJ VÁLIDO*
 
-`TributacaoBr.mask_cnpj("18808665770540")`  
-**Resultado**: Ex.: 18.808.665/7705-40  
+`TributacaoBr.is_cnpj("18.XXX.665/7705-40")`  
+**Resultado**: true  
 
-#### *- REMOVE MÁSCARA DE CNPJ*
+##### *- ADICIONA MÁSCARA AO CNPJ*
 
-`TributacaoBr.unmask_cnpj("18.808.665/7705-40")`  
-**Resultado**: Ex.: 18808665770540  
+`TributacaoBr.mask_cnpj("18XXX665770540")`  
+**Resultado**: Ex.: 18.XXX.665/7705-40  
 
+##### *- REMOVE MÁSCARA DE CNPJ*
 
-  describe("GERADOR CNPJ", function() {
-    const cnpj = TributacaoBr.();
-    it(`deve gerar um cnpj: '${cnpj}' válido com 18 caracteres`, function() {
-      assert.notEqual(cnpj, undefined);
-      assert.equal(cnpj.length, 18);
-    });
-  });
-  describe("DEVE SER UM CNPJ VALIDO", function() {
-    const value = "",
-      expected = true;
+`TributacaoBr.unmask_cnpj("18.XXX.665/7705-40")`  
+**Resultado**: Ex.: 18XXX665770540  
 
-    it(`'${value}' validar o 'cnpj' '${value}' deve retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.is_cnpj(value), expected);
-    });
-  });
-  describe("DEVE MASCARAR UM CNPJ", function() {
-    const value = "18808665770540",
-      expected = "18.808.665/7705-40";
+#### INSCRIÇÃO FEDERAL
 
-    it(`'${value}' deve adicionar mascara ao 'cnpj': '${value}' e retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.(value), expected);
-    });
-  });
-  describe("DEVE REMOVER A MASCARA DE UM CNPJ", function() {
-    const value = "18.808.665/7705-40",
-      expected = "18808665770540";
+##### *- DEVE SER UMA INSCRIÇÃO FEDERAL VÁLIDA*
 
-    it(`'${value}' deve remover a mascara do 'cnpj': '${value}' e retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.unmask_cnpj(value), expected);
-    });
-  });
+`TributacaoBr.is_federal_number("000.504.XXX-95")`  
+**Resultado**: true
 
-  describe("DEVE SER UMA INSCRIÇÃO FEDERAL VALIDA - CPF", function() {
-    const value = "000.504.631-95",
-      expected = true;
+`TributacaoBr.is_federal_number("18.XXX.665/7705-40")`  
+**Resultado**: true  
 
-    it(`'${value}' validar a 'inscrição federal:' '${value}' deve retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.is_federal_number(value), expected);
-    });
-  });
-  describe("DEVE SER UMA INSCRIÇÃO FEDERAL VALIDA - CNPJ", function() {
-    const value = "18.808.665/7705-40",
-      expected = true;
+##### *- ADICIONA MÁSCARA A INSCRIÇÃO FEDERAL *
 
-    it(`'${value}' validar a 'inscrição federal:' '${value}' deve retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.is_federal_number(value), expected);
-    });
-  });
-  describe("DEVE MASCARAR A INSCRIÇÃO FEDERAL - CPF", function() {
-    const value = "00050463195",
-      expected = "000.504.631-95";
+`TributacaoBr.mask_federal_number("000504XXX95")`  
+**Resultado**: Ex.: 000.504.XXX-95 
 
-    it(`'${value}' deve adicionar mascara a 'inscrição federal': '${value}' e retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.mask_federal_number(value), expected);
-    });
-  });
-  describe("DEVE MASCARAR A INSCRIÇÃO FEDERAL - CNPJ", function() {
-    const value = "18808665770540",
-      expected = "18.808.665/7705-40";
+`TributacaoBr.mask_federal_number("18XXX665770540")`  
+**Resultado**: Ex.: 18.XXX.665/7705-40  
 
-    it(`'${value}' deve adicionar mascara ao 'inscrição federal': '${value}' e retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.mask_federal_number(value), expected);
-    });
-  });
-  describe("DEVE REMOVER A MASCARA DA INSCRIÇÃO FEDERAL - CPF", function() {
-    const value = "000.504.631-95",
-      expected = "00050463195";
+##### *- REMOVE MÁSCARA DE UMA INSCRIÇÃO FEDERAL *
 
-    it(`'${value}' deve remover a mascara da 'inscrição federal': '${value}' e retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.unmask_federal_number(value), expected);
-    });
-  });
-  describe("DEVE REMOVER A MASCARA DA INSCRIÇÃO FEDERAL - CNPJ", function() {
-    const value = "18.808.665/7705-40",
-      expected = "18808665770540";
+`TributacaoBr.unmask_federal_number("000.504.XXX-95")`  
+**Resultado**: Ex.: 000504XXX95  
 
-    it(`'${value}' deve remover a mascara da 'inscrição federal': '${value}' e retornar '${expected}'`, function() {
-      assert.equal(TributacaoBr.unmask_federal_number(value), expected);
-    });
-  });
+`TributacaoBr.unmask_federal_number("18.XXX.665/7705-40")`  
+**Resultado**: Ex.: 18XXX665770540  
+
