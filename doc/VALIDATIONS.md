@@ -11,3 +11,13 @@
 -   [VALIDATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/VALIDATIONS.md)
 
 ### VALIDATIONS
+
+#### *- IS EMPTY*
+
+`Validations.is_empty()`  
+**Resultado**: Ex.: 000.504.XXX-95  
+
+#### *- IS EMPTY TRIMED*
+
+`Validations.is_empty_trimed()`  
+**Resultado**: Ex.: 000.504.XXX-95  

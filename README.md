@@ -16,9 +16,9 @@ Biblioteca javascript para agilizar o desenvolvimento. Utilitários e Facilitado
 
 ## DEPENDENCIAS:
 
--   [cpf_cnpj](https://github.com/fnando/cpf_cnpj) - Para gerar, formatar e validar CPF.
+-   [cpf_cnpj](https://github.com/fnando/cpf_cnpj) - Para gerar, formatar e validar CPF/CNPJ.
 -   [numero-por-extenso](https://github.com/LenonBordini/numero-por-extenso) - Para escrever números por extenso.
 
 ## LICENÇA:
 
--   [MIT License](https://github.com/maviniciuus/js-helpers/blob/master/LICENSE.md) - Para gerar, formatar e validar CPF.
+-   [MIT License](https://github.com/maviniciuus/js-helpers/blob/master/LICENSE.md)
