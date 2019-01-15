@@ -1,4 +1,5 @@
 const Dates = {
+	format_date: (date, pattern) => moment(date).format(pattern),
 	milli_to_days: milliseconds => milliseconds / 24 / 60 / 60 / 1000,
 	milli_to_months: milliseconds => {
 		const month_milli = 2629746000; //gregorian calendar
