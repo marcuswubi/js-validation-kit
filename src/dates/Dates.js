@@ -86,6 +86,24 @@ const Dates = {
 			'Dezembro',
 		][month_number];
 	},
+	diff_dias: (d1, d2) => {
+		const timeDiff = Math.abs(d2.getTime() - d1.getTime());
+		return Math.ceil(timeDiff / (1000 * 3600 * 24));
+	},
+	diff_meses: (d1, d2) => {
+		const timeDiff = Math.abs(d2.getTime() - d1.getTime());
+		const diffDias = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+		return Math.floor(diffDias / 30);
+	},
+	add_meses: (date, meses) => {
+		date.setUTCMonth(date.getUTCMonth() + meses);
+		return date;
+	},
+	del_meses: (date, meses) => {
+		date.setUTCMonth(date.getUTCMonth() + meses);
+		return date;
+	},
 };
 
 module.exports = Dates;
