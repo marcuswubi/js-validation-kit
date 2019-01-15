@@ -31,9 +31,9 @@
 
 #### *- IS UF*
 
-`Locations.to_integer('SC')`  
+`Locations.is_uf('SC')`  
 **Resultado**: true
 
-`Locations.to_integer('DD')`  
+`Locations.is_uf('DD')`  
 **Resultado**: false
 

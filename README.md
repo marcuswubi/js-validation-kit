@@ -1,6 +1,6 @@
-# js-helpers
+# af-helpers
 
-Biblioteca javascript para agilizar o desenvolvimento. Utilitários e Facilitadores para escrever a regra de negócio de forma clara e objetiva.
+Biblioteca javascript para agilizar o desenvolvimento. Contém vários Utilitários e Facilitadores, para escrever a regra de negócio de forma clara e objetiva. O `js-helpers` nada mais é que um caixa de ferramentas do desenvolvedor;
 
 ## DOCUMENTAÇÃO:
 
