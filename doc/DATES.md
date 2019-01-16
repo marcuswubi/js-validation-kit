@@ -35,9 +35,7 @@
 |                                   | WW                    | 01 02 ... 52 53                                   |
 | **Year**                          | YY                    | 70 71 ... 29 30                                   |
 |                                   | YYYY                  | 1970 1971 ... 2029 2030                           |
-|                                   | Y                     | 1970 1971 ... 9999 +10000 +10001  
-                                                              **Note**: This complies with the ISO 8601 
-                                                              standard for dates past the year 9999             |
+|                                   | Y                     | 1970 1971 ... 9999 +10000 +10001 **Note**: This complies with the ISO 8601 standard for dates past the year 9999|
 | **Week Year**                     | gg                    | 70 71 ... 29 30                                   |
 |                                   | gggg                  | 1970 1971 ... 2029 2030                           |
 | **Week Year (ISO)**               | GG                    | 70 71 ... 29 30                                   |
@@ -58,8 +56,7 @@
 |                                   | SS                    | 00 01 ... 98 99                                   |
 |                                   | SSS                   | 000 001 ... 998 999                               |
 |                                   | SSSS ... SSSSSSSSS    | 000[0..] 001[0..] ... 998[0..] 999[0..]           |
-| **Time Zone**                     | z or zz               | EST CST ... MST PST
-                                                              **Note:** as of **1.6.0**, the z/zz format tokens have been deprecated from plain moment objects. However, they do work ifyou are using a specific time zone with the moment-timezone addon.         |
+| **Time Zone**                     | z or zz               | EST CST ... MST PST **Note:** as of **1.6.0**, the z/zz format tokens have been deprecated from plain moment objects. However, they do work ifyou are using a specific time zone with the moment-timezone addon.|
 |                                   | Z                     | -07:00 -06:00 ... +06:00 +07:00                   |
 |                                   | ZZ                    | -0700 -0600 ... +0600 +0700                       |
 | **Unix Timestamp**                | X                     | 1360013296                                        |
