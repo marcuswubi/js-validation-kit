@@ -5,6 +5,7 @@ Where you go you can use it. For both,  browser and node.js environments.
 
 [![NPM Version](http://img.shields.io/npm/v/js-fast.svg?style=flat)](https://www.npmjs.org/package/js-fast)
 [![License](https://img.shields.io/npm/l/js-fast.svg?style=flat)](https://github.com/maviniciuus/js-fast/blob/master/LICENSE)
+[![Total Downloads](https://img.shields.io/npm/dt/js-fast.svg?style=flat)](https://www.npmjs.org/package/js-fast)
 
 ## GETTING STARTED:
 `npm i js-fast`  
