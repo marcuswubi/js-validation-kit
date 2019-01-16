@@ -3,7 +3,7 @@
 
 ### VALIDATIONS
 
-#### *- IS TYPE*
+#### *IS TYPE*
 
 `Validations.is_type('string', "marcus")`  
 **Result:** true
@@ -14,7 +14,7 @@
 `Validations.is_type('number', '1')`  
 **Result:** false  
 
-#### *- IS EMPTY*
+#### *IS EMPTY*
 
 `Validations.is_empty("marcus")`  
 **Result:** false  
@@ -50,7 +50,7 @@
 **Result:** true  
 
 
-#### *- IS EMPTY TRIMED*
+#### *IS EMPTY TRIMED*
 
 `Validations.is_empty_trimed()`  
 **Result:** Ex.: 000.504.XXX-95  

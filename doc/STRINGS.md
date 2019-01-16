@@ -3,42 +3,42 @@
 
 ### STRINGS:
 
-#### *- CAPITALIZE*
+#### *CAPITALIZE*
 
 `Strings.capitalize('string lowercase virou capitalize');`  
 **Result:** String lowercase virou capitalize
 
-#### *- UPPERCASE*
+#### *UPPERCASE*
 
 `Strings.uppercase('string lowercase virou uppercase');`  
 **Result:** STRING LOWERCASE VIROU UPPERCASE
 
-#### *- LOWERCASE*
+#### *LOWERCASE*
 
 `Strings.lowercase('STRING UPPERCASE VIROU LOWERCASE');`  
 **Result:** string uppercase virou lowercase
 
-#### *- STRING COMEÇA COM*
+#### *STRING COMEÇA COM*
 
 `Strings.starts_with('banana', 'bana');`  
 **Result:** true
 
-#### *- STRING TERMINA COM*
+#### *STRING TERMINA COM*
 
 `Strings.ends_with('banana', ana');`  
 **Result:** true
 
-#### *- REMOVE CARÁCTERES DO INÍCIO*
+#### *REMOVE CARÁCTERES DO INÍCIO*
 
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
 **Result:** emover 1 caracter do inicio
 
-#### *- REMOVE CARÁCTERES DO FINAL*
+#### *REMOVE CARÁCTERES DO FINAL*
 
 `Strings.remove_char_right('remover 3 caracteres do final', 3);`  
 **Result:** remover 3 caracteres do fi
 
-#### *- CONCATENA CARÁCTERES NO INÍCIO*
+#### *CONCATENA CARÁCTERES NO INÍCIO*
 
 `Strings.str_pad_left('.234890', 5, '0')`  
 **Result:** 00000.234890
@@ -52,7 +52,7 @@
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
 **Result:** emover 1 caracter do inicio
 
-#### *- CONCATENA CARÁCTERES NO FINAL*
+#### *CONCATENA CARÁCTERES NO FINAL*
 
 `Strings.str_pad_right('522', 5, '0')`  
 **Result:** 52200000
@@ -63,7 +63,7 @@
 `Strings.str_pad_right('522', 3, '-')`  
 **Result:** 522---
 
-#### *- PLURAL PT-BR*
+#### *PLURAL PT-BR*
 
 `Strings.pluralize_pt('caneta');`  
 **Result:** canetas
@@ -83,7 +83,7 @@
 `Strings.pluralize_pt('cidadão');`  
 **Result:** cidadões
 
-#### *- SINGULAR PT-BR*
+#### *SINGULAR PT-BR*
 
 `Strings.singulate_pt('canetas');`  
 **Result:** caneta
@@ -103,7 +103,7 @@
 `Strings.singulate_pt('cidadões');`  
 **Result:** cidadão
 
-#### *- REMOVE OS ACENTOS*
+#### *REMOVE OS ACENTOS*
 
 `Strings.to_non_acents('ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž')`  
 **Result:** rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz
@@ -114,7 +114,7 @@
 `Strings.to_non_acents('O coração é doce como banana caramelizada com açucar.')`  
 **Result:** O coracao e doce como banana caramelizada com acucar.
 
-#### *- CONVERTER EM UMA URL*
+#### *CONVERTER EM UMA URL*
 
 `Strings.to_url('Marcus Vinícius Mendes Gonçalves')`  
 **Result:** marcus_vinicius_mendes_goncalves

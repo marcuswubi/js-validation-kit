@@ -3,7 +3,7 @@
 
 ### LOCATIONS
 
-#### *- IS CEP*
+#### *IS CEP*
 
 `Locations.is_cep('89.888-777')`  
 **Result:** true  
@@ -11,17 +11,17 @@
 `Locations.is_cep('89888777')`  
 **Result:** true  
 
-#### *- MASK CEP*
+#### *MASK CEP*
 
 `Locations.mask_cep('89888777')`  
 **Result:** 89.888-777
 
-#### *- UMASK CEP*
+#### *UMASK CEP*
 
 `Locations.unmask_cep('89.888-777')`  
 **Result:** 89888777
 
-#### *- IS UF*
+#### *IS UF*
 
 `Locations.is_uf('SC')`  
 **Result:** true

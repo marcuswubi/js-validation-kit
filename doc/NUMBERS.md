@@ -3,7 +3,7 @@
 
 ### NUMBERS:
 
-#### *- INT PARA STRING*
+#### *INT PARA STRING*
 
 `Numbers.to_integer('47-segundos')`  
 **Result:** 47
@@ -11,7 +11,7 @@
 `Numbers.to_integer('2cachorros5patos')`  
 **Result:** 25
 
-#### *- INTEIRO POR EXTENSO*
+#### *INTEIRO POR EXTENSO*
 
 ##### *NORMAL*
 
