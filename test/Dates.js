@@ -5,7 +5,7 @@ describe('Dates', function() {
 	// describe("DATE", function() {
 	//   const value = "",
 	//     expected = false;
-	//   it(`'deve validar se '${value}'`, function() {
+	//   it(`'must validate if '${value}'`, function() {
 	//     assert.equal(Dates.is_empty(value), expected);
 	//   });
 	// });

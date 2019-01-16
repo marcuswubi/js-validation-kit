@@ -5,49 +5,49 @@ describe('Validations', function() {
 	describe('IS TYPE', function() {
 		const value = 'marcus',
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é string`, function() {
+		it(`'must validate if type of '${value}' is string`, function() {
 			assert.equal(Validations.is_type('string', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = 1,
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é number`, function() {
+		it(`'must validate if type of '${value}' is number`, function() {
 			assert.equal(Validations.is_type('number', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = 1.5,
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é number`, function() {
+		it(`'must validate if type of '${value}' is number`, function() {
 			assert.equal(Validations.is_type('number', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = '1',
 			expected = false;
-		it(`'deve validar se o tipo de '${value}' não é number`, function() {
+		it(`'must validate if type of '${value}' não is number`, function() {
 			assert.equal(Validations.is_type('number', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = true,
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é boolean`, function() {
+		it(`'must validate if type of '${value}' is boolean`, function() {
 			assert.equal(Validations.is_type('boolean', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = false,
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é boolean`, function() {
+		it(`'must validate if type of '${value}' is boolean`, function() {
 			assert.equal(Validations.is_type('boolean', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = () => {},
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é function`, function() {
+		it(`'must validate if type of '${value}' is function`, function() {
 			assert.equal(Validations.is_type('function', value), expected);
 		});
 	});
@@ -61,140 +61,140 @@ describe('Validations', function() {
 				}
 			}),
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é promisse`, function() {
+		it(`'must validate if type of '${value}' is promise`, function() {
 			assert.equal(Validations.is_type('promisse', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = {},
 			expected = true;
-		it(`'deve validar se o tipo de '${value}' é object`, function() {
+		it(`'must validate if type of '${value}' is object`, function() {
 			assert.equal(Validations.is_type('object', value), expected);
 		});
 	});
 	describe('IS TYPE', function() {
 		const value = [],
 			expected = true;
-		it(`'deve validar se o tipo de '[${value.join(', ')}]' é array`, function() {
+		it(`'must validate if type of '[${value.join(', ')}]' is array`, function() {
 			assert.equal(Validations.is_type('array', value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = 'acelera.framework',
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = ' marcus',
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = 0,
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = 1,
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = 0.25,
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = true,
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = false,
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = undefined,
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = '',
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY', function() {
 		const value = null,
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty`, function() {
 			assert.equal(Validations.is_empty(value), expected);
 		});
 	});
 	describe('IS EMPTY TRIMED', function() {
 		const value = '        ',
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty trimed`, function() {
 			assert.equal(Validations.is_empty_trimed(value), expected);
 		});
 	});
 	describe('IS EMPTY TRIMED', function() {
 		const value = ' ',
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty trimed`, function() {
 			assert.equal(Validations.is_empty_trimed(value), expected);
 		});
 	});
 	describe('IS EMPTY TRIMED', function() {
 		const value = '',
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty trimed`, function() {
 			assert.equal(Validations.is_empty_trimed(value), expected);
 		});
 	});
 	describe('IS EMPTY TRIMED', function() {
 		const value = 'acelera.framework',
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty trimed`, function() {
 			assert.equal(Validations.is_empty_trimed(value), expected);
 		});
 	});
 	describe('IS EMPTY TRIMED', function() {
 		const value = ' marcus',
 			expected = false;
-		it(`'deve validar se '${value}' não esta vazio`, function() {
+		it(`'must validate if '${value}' is not empty trimed`, function() {
 			assert.equal(Validations.is_empty_trimed(value), expected);
 		});
 	});
 	describe('IS EMPTY TRIMED', function() {
 		const value = undefined,
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty trimed`, function() {
 			assert.equal(Validations.is_empty_trimed(value), expected);
 		});
 	});
 	describe('IS EMPTY TRIMED', function() {
 		const value = null,
 			expected = true;
-		it(`'deve validar se '${value}' esta vazio`, function() {
+		it(`'must validate if '${value}' is empty trimed`, function() {
 			assert.equal(Validations.is_empty_trimed(value), expected);
 		});
 	});

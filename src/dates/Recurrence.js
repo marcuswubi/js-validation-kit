@@ -12,11 +12,11 @@ const Recurrence = {
 		for (let i = 0; i < duration; i++) {
 			const maturity = new Date(start_date);
 			maturity.setUTCDate(maturity_day);
-			//Tratamento para considerar a primeira data como valida pra cobrança ou não
+			//treatment to consider the first possible date as valid for bill
 			let addMesVencimento = i + 1;
 			if (bill_first_month) addMesVencimento--;
 			maturity.setUTCMonth(maturity.getUTCMonth() + addMesVencimento);
-			//Valida se bloqueia finais de semana e se o dia é sabado ou domingo
+			//valid if you block bill on weekends
 			const day = maturity.getDay();
 			if (skip_weekend && day === 6) maturity.setUTCDate(maturity.getDate() + 2);
 			if (skip_weekend && day === 0) maturity.setUTCDate(maturity.getDate() + 1);

@@ -1,12 +1,26 @@
 const assert = require('assert');
-const { Functions } = require('../src/index');
+const Functions = require('../src/index').Functions;
 
 describe('Functions', function() {
-	describe('IS MONGO ID', function() {
-		const value = 'cTNRRsYAgGxRziJ78',
+	describe('IS FUNCTION', function() {
+		const value = () => {},
 			expected = true;
-		it(`'deve validar se '${value}' é um mongo _id`, function() {
-			assert.equal(Functions.is_mongo_id(value), expected);
+		it(`'must validate if '${value}' is a function`, function() {
+			assert.equal(Functions.is_function(value), expected);
+		});
+	});
+	describe('IS FUNCTION', function() {
+		const value = {},
+			expected = false;
+		it(`'must validate if '${value}' is not a function`, function() {
+			assert.equal(Functions.is_function(value), expected);
+		});
+	});
+	describe('IS FUNCTION', function() {
+		const value = [],
+			expected = false;
+		it(`'must validate if '${value}' is not a function`, function() {
+			assert.equal(Functions.is_function(value), expected);
 		});
 	});
 });
