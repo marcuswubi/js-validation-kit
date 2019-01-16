@@ -31,4 +31,5 @@ Recommended for those who are starting up and for those who want to use ready ha
 - [numero-por-extenso](https://github.com/LenonBordini/numero-por-extenso) - To write numbers in full.
 
 ## LICENSE:
+Developed by Marcus Vinícius Mendes Gonçalves, during research and study of systems development with javascript.
 - [MIT License](https://github.com/maviniciuus/js-helpers/blob/master/LICENSE.md)
