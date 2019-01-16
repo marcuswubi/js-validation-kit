@@ -59,10 +59,7 @@
 |                                   | SSS                   | 000 001 ... 998 999                               |
 |                                   | SSSS ... SSSSSSSSS    | 000[0..] 001[0..] ... 998[0..] 999[0..]           |
 | **Time Zone**                     | z or zz               | EST CST ... MST PST
-                                                              **Note:** as of **1.6.0**, the z/zz format tokens
-                                                              have been deprecated from plain moment objects.
-                                                              However, they do work if you are using a specific
-                                                              time zone with the moment-timezone addon.         |
+                                                              **Note:** as of **1.6.0**, the z/zz format tokens have been deprecated from plain moment objects. However, they do work ifyou are using a specific time zone with the moment-timezone addon.         |
 |                                   | Z                     | -07:00 -06:00 ... +06:00 +07:00                   |
 |                                   | ZZ                    | -0700 -0600 ... +0600 +0700                       |
 | **Unix Timestamp**                | X                     | 1360013296                                        |
