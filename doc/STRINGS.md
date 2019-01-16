@@ -6,118 +6,118 @@
 #### *- CAPITALIZE*
 
 `Strings.capitalize('string lowercase virou capitalize');`  
-**Resultado**: String lowercase virou capitalize
+**Result:** String lowercase virou capitalize
 
 #### *- UPPERCASE*
 
 `Strings.uppercase('string lowercase virou uppercase');`  
-**Resultado**: STRING LOWERCASE VIROU UPPERCASE
+**Result:** STRING LOWERCASE VIROU UPPERCASE
 
 #### *- LOWERCASE*
 
 `Strings.lowercase('STRING UPPERCASE VIROU LOWERCASE');`  
-**Resultado**: string uppercase virou lowercase
+**Result:** string uppercase virou lowercase
 
 #### *- STRING COMEÇA COM*
 
 `Strings.starts_with('banana', 'bana');`  
-**Resultado**: true
+**Result:** true
 
 #### *- STRING TERMINA COM*
 
 `Strings.ends_with('banana', ana');`  
-**Resultado**: true
+**Result:** true
 
 #### *- REMOVE CARÁCTERES DO INÍCIO*
 
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
-**Resultado**: emover 1 caracter do inicio
+**Result:** emover 1 caracter do inicio
 
 #### *- REMOVE CARÁCTERES DO FINAL*
 
 `Strings.remove_char_right('remover 3 caracteres do final', 3);`  
-**Resultado**: remover 3 caracteres do fi
+**Result:** remover 3 caracteres do fi
 
 #### *- CONCATENA CARÁCTERES NO INÍCIO*
 
 `Strings.str_pad_left('.234890', 5, '0')`  
-**Resultado**: 00000.234890
+**Result:** 00000.234890
 
 `Strings.str_pad_left('.234890', 5, 'X')`  
-**Resultado**: XXXXX.234890
+**Result:** XXXXX.234890
 
 `Strings.str_pad_left('.234890', 5, '-')`  
-**Resultado**: -----.234890
+**Result:** -----.234890
 
 `Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
-**Resultado**: emover 1 caracter do inicio
+**Result:** emover 1 caracter do inicio
 
 #### *- CONCATENA CARÁCTERES NO FINAL*
 
 `Strings.str_pad_right('522', 5, '0')`  
-**Resultado**: 52200000
+**Result:** 52200000
 
 `Strings.str_pad_right('522', 4, 'X')`  
-**Resultado**: 522XXXX
+**Result:** 522XXXX
 
 `Strings.str_pad_right('522', 3, '-')`  
-**Resultado**: 522---
+**Result:** 522---
 
 #### *- PLURAL PT-BR*
 
 `Strings.pluralize_pt('caneta');`  
-**Resultado**: canetas
+**Result:** canetas
 
 `Strings.pluralize_pt('pessoa');`  
-**Resultado**: pessoas
+**Result:** pessoas
 
 `Strings.pluralize_pt('qualquer');`  
-**Resultado**: quaisquer
+**Result:** quaisquer
 
 `Strings.pluralize_pt('mão');`  
-**Resultado**: mãos
+**Result:** mãos
 
 `Strings.pluralize_pt('cidade');`  
-**Resultado**: cidades
+**Result:** cidades
 
 `Strings.pluralize_pt('cidadão');`  
-**Resultado**: cidadões
+**Result:** cidadões
 
 #### *- SINGULAR PT-BR*
 
 `Strings.singulate_pt('canetas');`  
-**Resultado**: caneta
+**Result:** caneta
 
 `Strings.singulate_pt('pessoas');`  
-**Resultado**: pessoa
+**Result:** pessoa
 
 `Strings.singulate_pt('quaisquer');`  
-**Resultado**: qualquer
+**Result:** qualquer
 
 `Strings.singulate_pt('mãos');`  
-**Resultado**: mão
+**Result:** mão
 
 `Strings.singulate_pt('cidades');`  
-**Resultado**: cidade
+**Result:** cidade
 
 `Strings.singulate_pt('cidadões');`  
-**Resultado**: cidadão
+**Result:** cidadão
 
 #### *- REMOVE OS ACENTOS*
 
 `Strings.to_non_acents('ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž')`  
-**Resultado**: rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz
+**Result:** rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz
 
 `Strings.to_non_acents('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`  
-**Resultado**: O CORACAO E DOCE COMO BANANA CARAMELIZADA COM ACUCAR.
+**Result:** O CORACAO E DOCE COMO BANANA CARAMELIZADA COM ACUCAR.
 
 `Strings.to_non_acents('O coração é doce como banana caramelizada com açucar.')`  
-**Resultado**: O coracao e doce como banana caramelizada com acucar.
+**Result:** O coracao e doce como banana caramelizada com acucar.
 
 #### *- CONVERTER EM UMA URL*
 
 `Strings.to_url('Marcus Vinícius Mendes Gonçalves')`  
-**Resultado**: marcus_vinicius_mendes_goncalves
+**Result:** marcus_vinicius_mendes_goncalves
 
 `Strings.to_url('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`  
-**Resultado**: o_coracao_e_doce_como_banana_caramelizada_com_acucar
+**Result:** o_coracao_e_doce_como_banana_caramelizada_com_acucar

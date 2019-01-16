@@ -6,72 +6,72 @@
 #### *- IS TYPE*
 
 `Validations.is_type('string', "marcus")`  
-**Resultado**: true
+**Result:** true
 
 `Validations.is_type('number', 1)`  
-**Resultado**: true  
+**Result:** true  
 
 `Validations.is_type('number', '1')`  
-**Resultado**: false  
+**Result:** false  
 
 #### *- IS EMPTY*
 
 `Validations.is_empty("marcus")`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty('acelera.framework')`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty(' marcus')`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty(0)`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty(1)`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty(0.25)`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty(true)`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty(false)`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty(undefined)`  
-**Resultado**: true  
+**Result:** true  
 
 `Validations.is_empty('')`  
-**Resultado**: true  
+**Result:** true  
 
 `Validations.is_empty(null)`  
-**Resultado**: true  
+**Result:** true  
 
 
 #### *- IS EMPTY TRIMED*
 
 `Validations.is_empty_trimed()`  
-**Resultado**: Ex.: 000.504.XXX-95  
+**Result:** Ex.: 000.504.XXX-95  
 
 `Validations.is_empty_trimed('        ')`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty_trimed(' ')`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty_trimed('')`  
-**Resultado**: true  
+**Result:** true  
 
 `Validations.is_empty_trimed('acelera.framework')`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty_trimed(' marcus')`  
-**Resultado**: false  
+**Result:** false  
 
 `Validations.is_empty_trimed(undefined)`  
-**Resultado**: true    
+**Result:** true    
 
 `Validations.is_empty_trimed(null)`  
-**Resultado**: true  
+**Result:** true  

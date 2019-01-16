@@ -6,26 +6,26 @@
 #### *- IS CEP*
 
 `Locations.is_cep('89.888-777')`  
-**Resultado**: true  
+**Result:** true  
 
 `Locations.is_cep('89888777')`  
-**Resultado**: true  
+**Result:** true  
 
 #### *- MASK CEP*
 
 `Locations.mask_cep('89888777')`  
-**Resultado**: 89.888-777
+**Result:** 89.888-777
 
 #### *- UMASK CEP*
 
 `Locations.unmask_cep('89.888-777')`  
-**Resultado**: 89888777
+**Result:** 89888777
 
 #### *- IS UF*
 
 `Locations.is_uf('SC')`  
-**Resultado**: true
+**Result:** true
 
 `Locations.is_uf('DD')`  
-**Resultado**: false
+**Result:** false
 

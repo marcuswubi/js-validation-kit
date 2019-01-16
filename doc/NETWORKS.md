@@ -6,96 +6,96 @@
 #### *- IS DOMAIN*
 
 `Networks.is_domain("https://acelera.cloud")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_domain("http://acelera.cloud")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_domain("acelera.cloud")`  
-**Resultado:** true  
+**Result:** true  
 
 
 #### *- IS URL*
 
 `Networks.is_url("http://acelera.cloud/contato")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_url("http://acelera.cloud/contato?prop1=teste&prop2=teste")`  
-**Resultado:** true 
+**Result:** true 
 
 `Networks.is_url("https://acelera.cloud/contato")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_url("https://acelera.cloud/contato?prop1=teste&prop2=teste")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_url("acelera.cloud/contato")`  
-**Resultado:** false  
+**Result:** false  
 
 `Networks.is_url("acelera.cloud/contato?prop1=teste&prop2=teste")`  
-**Resultado:** false  
+**Result:** false  
 
 
 #### *- IS EMAIL WITH TLD*
 
 `Networks.is_email_with_tld("marcus@aceleracloud.com.br")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email_with_tld("marcus@aceleracloud.com")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email_with_tld("marcus@acelera.cloud")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email_with_tld("marcus@acelera")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email_with_tld("marcus@localhost")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email_with_tld("marcus@10.0.0.1")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email_with_tld("marcus@0")`  
-**Resultado:** true  
+**Result:** true  
 
 #### *- IS EMAIL WITHOUT TLD*
 
 `Networks.is_email("marcus@aceleracloud.com.br")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email("marcus@aceleracloud.com")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email("marcus@acelera.cloud")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email("marcus@acelera")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email("marcus@localhost")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email("marcus@10.0.0.1")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_email("marcus@0")`  
-**Resultado:** true  
+**Result:** true  
 
 
 #### *- IS IP*
 
 `Networks.is_ip("localhost")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_ip("192.168.0.1")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_ipv4("10.0.0.1")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_ipv4("255.255.255.0")`  
-**Resultado:** true  
+**Result:** true  
 
 `Networks.is_ipv6("2001:0DB8:AD1F:25E2:CADE:CAFE:F0CA:84C1")`  
-**Resultado:** true  
+**Result:** true  

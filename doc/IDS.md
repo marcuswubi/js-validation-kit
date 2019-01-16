@@ -6,11 +6,11 @@
 #### *- IS MONGO _id*
 
 `Ids.is_mongo_id("5c3c08f0dc9d6576ec885aff")`  
-**Resultado:** true  
+**Result:** true  
 
 `Ids.is_mongo_id(1)`  
-**Resultado:** false  
+**Result:** false  
 
 `Ids.is_mongo_id("dasdasd")`  
-**Resultado:** false  
+**Result:** false  
 
