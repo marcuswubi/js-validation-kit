@@ -1,7 +1,7 @@
 {
-	"name": "af-helpers",
+	"name": "js-fast",
 	"version": "1.0.0",
-	"description": "Helper kit for development in javascript. Converters, Validations and Utilities.",
+	"description": "The js-helpers provides different helpers which enable to wrap functions and run chain functions. This library is thinked to help and bump down time of development of apps, and it is supported.",
 	"main": "lib/index.js",
 	"dependencies": {
 		"cpf_cnpj": "^0.2.0",
@@ -22,7 +22,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/maviniciuus/af-helpers.git"
+		"url": "git+https://github.com/maviniciuus/js-fast.git"
 	},
 	"keywords": [
 		"javascript",
@@ -39,7 +39,7 @@
 	"author": "Marcus Vinícius Mendes Gonçalves",
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/maviniciuus/af-helpers/issues"
+		"url": "https://github.com/maviniciuus/js-fast/issues"
 	},
-	"homepage": "https://github.com/maviniciuus/af-helpers#readme"
+	"homepage": "https://github.com/maviniciuus/js-fast#readme"
 }
