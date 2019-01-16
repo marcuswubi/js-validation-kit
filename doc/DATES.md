@@ -1,13 +1,5 @@
-## DOCUMENTAÇÃO:
-
--   [DATES](https://github.com/maviniciuus/js-helpers/blob/master/doc/DATES.md)
--   [LOCATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/LOCATIONS.md)
--   [MONGOS](https://github.com/maviniciuus/js-helpers/blob/master/doc/MONGOS.md)
--   [NETWORKS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NETWORKS.md)
--   [NUMBERS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NUMBERS.md)
--   [STRINGS](https://github.com/maviniciuus/js-helpers/blob/master/doc/STRINGS.md)
--   [TRIBUTACAO-BR](https://github.com/maviniciuus/js-helpers/blob/master/doc/TRIBUTACAO-BR.md)
--   [VALIDATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/VALIDATIONS.md)
+### MENU:
+[DATES](https://github.com/maviniciuus/js-helpers/blob/master/doc/DATES.md) *-* [LOCATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/LOCATIONS.md) *-* [FUNCTIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/FUNCTIONS.md) *-* [IDS](https://github.com/maviniciuus/js-helpers/blob/master/doc/IDS.md) *-* [NETWORKS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NETWORKS.md) *-* [NUMBERS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NUMBERS.md) / [STRINGS](https://github.com/maviniciuus/js-helpers/blob/master/doc/STRINGS.md) *-* [TRIBUTACAO-BR](https://github.com/maviniciuus/js-helpers/blob/master/doc/TRIBUTACAO-BR.md) *-* [VALIDATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/VALIDATIONS.md)
 
 ### DATES
 
@@ -36,61 +28,18 @@
 | **Day of Week (Locale)**      | e          	      | 0 1 ... 5 6                                 |
 | **Day of Week (ISO)**         | E          	      | 1 2 ... 6 7                                 |
 | **Week of Year (ISO)**        | w          	      | 1 2 ... 52 53                               |
+|                               | wo                | 1st 2nd ... 52nd 53rd                       |
+|                               | ww                | 01 02 ... 52 53                             |
+| **Week of Year (ISO)**        | W                 | 1 2 ... 52 53                               |
+|                               | Wo                | 1st 2nd ... 52nd 53rd                       |
+|                               | WW                | 01 02 ... 52 53                             |
+| **Year**                      | YY                | 70 71 ... 29 30                             |
+|                               | YYYY              | 1970 1971 ... 2029 2030                     |
+|                               | Y                 | 1970 1971 ... 9999 +10000 +10001  **Note**: This complies with the ISO 8601 standard for dates past the year 9999 |
+| **Week Year**                 | gg                | 70 71 ... 29 30                             |
+|                               | gggg              | 1970 1971 ... 2029 2030                     |
 
 <table class="table table-striped table-bordered">
-    <tr>
-      <td></td>
-      <td>wo</td>
-      <td>1st 2nd ... 52nd 53rd</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>ww</td>
-      <td>01 02 ... 52 53</td>
-    </tr>
-    <tr>
-      <td><b>Week of Year (ISO)</b></td>
-      <td>W</td>
-      <td>1 2 ... 52 53</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>Wo</td>
-      <td>1st 2nd ... 52nd 53rd</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>WW</td>
-      <td>01 02 ... 52 53</td>
-    </tr>
-    <tr>
-      <td><b>Year</b></td>
-      <td>YY</td>
-      <td>70 71 ... 29 30</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>YYYY</td>
-      <td>1970 1971 ... 2029 2030</td>
-    </tr>
-      <tr>
-      <td></td>
-      <td>Y</td>
-      <td>1970 1971 ... 9999 +10000 +10001
-        <br>
-        <b>Note:</b> This complies with the ISO 8601 standard for dates past the year 9999
-      </td>
-    </tr>
-    <tr>
-      <td><b>Week Year</b></td>
-      <td>gg</td>
-      <td>70 71 ... 29 30</td>
-    </tr>
-    <tr>
-      <td></td>
-      <td>gggg</td>
-      <td>1970 1971 ... 2029 2030</td>
-    </tr>
     <tr>
       <td><b>Week Year (ISO)</b></td>
       <td>GG</td>
