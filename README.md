@@ -4,7 +4,7 @@ This library is thinked to help and bump down time of development of apps, and i
 Where you go you can use it. For both,  browser and node.js environments.
 
 [![NPM Version](http://img.shields.io/npm/v/js-fast.svg?style=flat)](https://www.npmjs.org/package/js-fast)
-[![License](https://img.shields.io/npm/l/funcs-js.svg?style=flat)](https://github.com/maviniciuus/js-fast/blob/master/LICENSE)
+[![License](https://img.shields.io/npm/l/js-fast.svg?style=flat)](https://github.com/maviniciuus/js-fast/blob/master/LICENSE)
 
 ## GETTING STARTED:
 `npm i js-fast`  
