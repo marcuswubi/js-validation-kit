@@ -11,6 +11,17 @@
 
 ### VALIDATIONS
 
+#### *- IS TYPE*
+
+`Validations.is_type('string', "marcus")`  
+**Resultado**: true
+
+`Validations.is_type('number', 1)`  
+**Resultado**: true  
+
+`Validations.is_type('number', '1')`  
+**Resultado**: false  
+
 #### *- IS EMPTY*
 
 `Validations.is_empty("marcus")`  
