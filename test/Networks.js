@@ -5,7 +5,7 @@ describe('Networks', function() {
 	describe('IS DOMAIN', function() {
 		const value = 'https://acelera.cloud',
 			expected = true;
-		it(`'must validate if '${value}' is a domínio`, function() {
+		it(`'must validate if '${value}' is a domain`, function() {
 			assert.equal(Networks.is_domain(value), expected);
 		});
 	});
