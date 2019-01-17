@@ -1,7 +1,7 @@
 |MENU||||||
 |---  |---  |---  |---  |---  |---  |
-| [HOME](https://github.com/maviniciuus/js-helpers/blob/master/README.md) | [DATES](https://github.com/maviniciuus/js-helpers/blob/master/doc/DATES.md)| [LOCATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/LOCATIONS.md) | [FUNCTIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/FUNCTIONS.md) | [NETWORKS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NETWORKS.md) | [NUMBERS](https://github.com/maviniciuus/js-helpers/blob/master/doc/NUMBERS.md) | 
-| [STRINGS](https://github.com/maviniciuus/js-helpers/blob/master/doc/STRINGS.md) | [TRIBUTACAO-BR](https://github.com/maviniciuus/js-helpers/blob/master/doc/TRIBUTACAO-BR.md) | [VALIDATIONS](https://github.com/maviniciuus/js-helpers/blob/master/doc/VALIDATIONS.md) | | | |
+| [HOME](README.md) | [DATES](doc/DATES.md)| [LOCATIONS](doc/LOCATIONS.md) | [FUNCTIONS](doc/FUNCTIONS.md) | [NETWORKS](doc/NETWORKS.md) | [NUMBERS](doc/NUMBERS.md) | 
+| [STRINGS](doc/STRINGS.md) | [TRIBUTACAO-BR](doc/TRIBUTACAO-BR.md) | [VALIDATIONS](doc/VALIDATIONS.md) | | | |
 
 ### VALIDATIONS
 
