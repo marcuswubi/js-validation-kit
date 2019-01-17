@@ -1,23 +1,13 @@
-const Functions = require('../src/index').Functions;
+const Functions = require("../src/index").Functions;
 
-const fn1 = number => number + 2;
-const fn2 = number => number - 1;
-
-const fn_promisse = num =>
-	new Promise(function(resolve, reject) {
-		//everything ok
-		if (true) {
-			num = num * 2;
-			resolve(num);
-		} else {
-			reject('failed');
-		}
-	});
+const fn_add = number => number + 2;
+const fn_subtract = number => number - 1;
+const fn_promise = require("../samples/fn_promise");
 
 const calc_pipe = Functions.pipe(
-	fn1,
-	fn2,
-	fn_promisse
+  fn_add,
+  fn_subtract,
+  fn_promise
 );
 
 calc_pipe(4).then(number => console.log(number));
