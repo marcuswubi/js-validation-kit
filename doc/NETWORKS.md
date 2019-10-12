@@ -7,13 +7,13 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *IS DOMAIN*
 
-`Networks.is_domain("https://google.com")`  
+`Networks.isDomain("https://google.com")`  
 **Result:** true  
 
-`Networks.is_domain("http://google.com")`  
+`Networks.isDomain("http://google.com")`  
 **Result:** true  
 
-`Networks.is_domain("google.com")`  
+`Networks.isDomain("google.com")`  
 **Result:** true  
 
 
@@ -40,64 +40,64 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *IS EMAIL WITH TLD*
 
-`Networks.is_email_with_tld("marcus@google.com.br")`  
+`Networks.isEmailWithTld("marcus@google.com.br")`  
 **Result:** true  
 
-`Networks.is_email_with_tld("marcus@google.com")`  
+`Networks.isEmailWithTld("marcus@google.com")`  
 **Result:** true  
 
-`Networks.is_email_with_tld("marcus@google.com")`  
+`Networks.isEmailWithTld("marcus@google.com")`  
 **Result:** true  
 
-`Networks.is_email_with_tld("marcus@acelera")`  
+`Networks.isEmailWithTld("marcus@acelera")`  
 **Result:** true  
 
-`Networks.is_email_with_tld("marcus@localhost")`  
+`Networks.isEmailWithTld("marcus@localhost")`  
 **Result:** true  
 
-`Networks.is_email_with_tld("marcus@10.0.0.1")`  
+`Networks.isEmailWithTld("marcus@10.0.0.1")`  
 **Result:** true  
 
-`Networks.is_email_with_tld("marcus@0")`  
+`Networks.isEmailWithTld("marcus@0")`  
 **Result:** true  
 
 #### *IS EMAIL WITHOUT TLD*
 
-`Networks.is_email("marcus@google.com.br")`  
+`Networks.isEmail("marcus@google.com.br")`  
 **Result:** true  
 
-`Networks.is_email("marcus@google.com")`  
+`Networks.isEmail("marcus@google.com")`  
 **Result:** true  
 
-`Networks.is_email("marcus@google.com")`  
+`Networks.isEmail("marcus@google.com")`  
 **Result:** true  
 
-`Networks.is_email("marcus@acelera")`  
+`Networks.isEmail("marcus@acelera")`  
 **Result:** true  
 
-`Networks.is_email("marcus@localhost")`  
+`Networks.isEmail("marcus@localhost")`  
 **Result:** true  
 
-`Networks.is_email("marcus@10.0.0.1")`  
+`Networks.isEmail("marcus@10.0.0.1")`  
 **Result:** true  
 
-`Networks.is_email("marcus@0")`  
+`Networks.isEmail("marcus@0")`  
 **Result:** true  
 
 
 #### *IS IP*
 
-`Networks.is_ip("localhost")`  
+`Networks.isIp("localhost")`  
 **Result:** true  
 
-`Networks.is_ip("192.168.0.1")`  
+`Networks.isIp("192.168.0.1")`  
 **Result:** true  
 
-`Networks.is_ipv4("10.0.0.1")`  
+`Networks.isIpv4("10.0.0.1")`  
 **Result:** true  
 
-`Networks.is_ipv4("255.255.255.0")`  
+`Networks.isIpv4("255.255.255.0")`  
 **Result:** true  
 
-`Networks.is_ipv6("2001:0DB8:AD1F:25E2:CADE:CAFE:F0CA:84C1")`  
+`Networks.isIpv6("2001:0DB8:AD1F:25E2:CADE:CAFE:F0CA:84C1")`  
 **Result:** true  

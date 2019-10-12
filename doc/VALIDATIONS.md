@@ -7,73 +7,73 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *IS TYPE*
 
-`Validations.is_type('string', "marcus")`  
+`Validations.isType('string', "marcus")`  
 **Result:** true
 
-`Validations.is_type('number', 1)`  
+`Validations.isType('number', 1)`  
 **Result:** true  
 
-`Validations.is_type('number', '1')`  
+`Validations.isType('number', '1')`  
 **Result:** false  
 
 #### *IS EMPTY*
 
-`Validations.is_empty("marcus")`  
+`Validations.isEmpty("marcus")`  
 **Result:** false  
 
-`Validations.is_empty('acelera.framework')`  
+`Validations.isEmpty('acelera.framework')`  
 **Result:** false  
 
-`Validations.is_empty(' marcus')`  
+`Validations.isEmpty(' marcus')`  
 **Result:** false  
 
-`Validations.is_empty(0)`  
+`Validations.isEmpty(0)`  
 **Result:** false  
 
-`Validations.is_empty(1)`  
+`Validations.isEmpty(1)`  
 **Result:** false  
 
-`Validations.is_empty(0.25)`  
+`Validations.isEmpty(0.25)`  
 **Result:** false  
 
-`Validations.is_empty(true)`  
+`Validations.isEmpty(true)`  
 **Result:** false  
 
-`Validations.is_empty(false)`  
+`Validations.isEmpty(false)`  
 **Result:** false  
 
-`Validations.is_empty(undefined)`  
+`Validations.isEmpty(undefined)`  
 **Result:** true  
 
-`Validations.is_empty('')`  
+`Validations.isEmpty('')`  
 **Result:** true  
 
-`Validations.is_empty(null)`  
+`Validations.isEmpty(null)`  
 **Result:** true  
 
 
 #### *IS EMPTY TRIMED*
 
-`Validations.is_empty_trimed()`  
+`Validations.isEmptyTrimed()`  
 **Result:** Ex.: 000.504.XXX-95  
 
-`Validations.is_empty_trimed('        ')`  
+`Validations.isEmptyTrimed('        ')`  
 **Result:** false  
 
-`Validations.is_empty_trimed(' ')`  
+`Validations.isEmptyTrimed(' ')`  
 **Result:** false  
 
-`Validations.is_empty_trimed('')`  
+`Validations.isEmptyTrimed('')`  
 **Result:** true  
 
-`Validations.is_empty_trimed('acelera.framework')`  
+`Validations.isEmptyTrimed('acelera.framework')`  
 **Result:** false  
 
-`Validations.is_empty_trimed(' marcus')`  
+`Validations.isEmptyTrimed(' marcus')`  
 **Result:** false  
 
-`Validations.is_empty_trimed(undefined)`  
+`Validations.isEmptyTrimed(undefined)`  
 **Result:** true    
 
-`Validations.is_empty_trimed(null)`  
+`Validations.isEmptyTrimed(null)`  
 **Result:** true  

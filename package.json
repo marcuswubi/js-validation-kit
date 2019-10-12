@@ -25,7 +25,7 @@
   "scripts": {
     "prepublishOnly": "npm run build",
     "nitro": "echo 'Coffeeeee timeee!'",
-    "test": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register",
+    "test": "./node_modules/.bin/mocha test/**/*.js --require babel-register",
     "lint": "./node_modules/.bin/eslint src/*.js",
     "prepush": "npm run lint",
     "clear": "rimraf lib",

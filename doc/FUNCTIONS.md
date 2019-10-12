@@ -7,10 +7,10 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *IS FUNCTION*
 
-`Functions.is_function(()=>{})`  
+`Functions.isFunction(()=>{})`  
 **Result:** true
 
-`Functions.is_function(new Promise(function(resolve, reject) {
+`Functions.isFunction(new Promise(function(resolve, reject) {
   //everything ok
   if (true) {
     num = num * 2;
@@ -23,7 +23,7 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *IS PROMISE*
 
-`Validations.is_promise(new Promise(function(resolve, reject) {
+`Validations.isPromise(new Promise(function(resolve, reject) {
   //everything ok
   if (true) {
     num = num * 2;
@@ -34,15 +34,15 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 });)`  
 **Result:** true
 
-`Validations.is_promise(()=>{})`  
+`Validations.isPromise(()=>{})`  
 **Result:** false  
 
 #### *IS CALLABLE*
 
-`Functions.is_callable(()=>{})`  
+`Functions.isCallable(()=>{})`  
 **Result:** true
 
-`Functions.is_callable(new Promise(function(resolve, reject) {
+`Functions.isCallable(new Promise(function(resolve, reject) {
   //everything ok
   if (true) {
     num = num * 2;

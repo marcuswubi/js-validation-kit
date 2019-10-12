@@ -7,27 +7,27 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *IS CEP*
 
-`Locations.is_cep('89.888-777')`  
+`Locations.isCep('89.888-777')`  
 **Result:** true  
 
-`Locations.is_cep('89888777')`  
+`Locations.isCep('89888777')`  
 **Result:** true  
 
 #### *MASK CEP*
 
-`Locations.mask_cep('89888777')`  
+`Locations.maskCep('89888777')`  
 **Result:** 89.888-777
 
 #### *UMASK CEP*
 
-`Locations.unmask_cep('89.888-777')`  
+`Locations.unmaskCep('89.888-777')`  
 **Result:** 89888777
 
 #### *IS UF*
 
-`Locations.is_uf('SC')`  
+`Locations.isUf('SC')`  
 **Result:** true
 
-`Locations.is_uf('DD')`  
+`Locations.isUf('DD')`  
 **Result:** false
 

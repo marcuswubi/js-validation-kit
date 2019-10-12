@@ -7,10 +7,10 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *INT PARA STRING*
 
-`Numbers.to_integer('47-segundos')`  
+`Numbers.toInteger('47-segundos')`  
 **Result:** 47
 
-`Numbers.to_integer('2cachorros5patos')`  
+`Numbers.toInteger('2cachorros5patos')`  
 **Result:** 25
 
 #### *INTEIRO POR EXTENSO*

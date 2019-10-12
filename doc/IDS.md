@@ -7,12 +7,12 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *IS MONGO _id*
 
-`Ids.is_mongo_id("5c3c08f0dc9d6576ec885aff")`  
+`Ids.isMongoId("5c3c08f0dc9d6576ec885aff")`  
 **Result:** true  
 
-`Ids.is_mongo_id(1)`  
+`Ids.isMongoId(1)`  
 **Result:** false  
 
-`Ids.is_mongo_id("dasdasd")`  
+`Ids.isMongoId("dasdasd")`  
 **Result:** false  
 

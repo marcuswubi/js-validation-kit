@@ -1,34 +1,27 @@
-const CPF = require("cpf_cnpj").CPF;
-const CNPJ = require("cpf_cnpj").CNPJ;
+const { CPF } = require('cpf_cnpj');
+const { CNPJ } = require('cpf_cnpj');
 
 const TributacaoBr = {
-  gen_cpf: (formatted = true) => {
-    return CPF.generate(formatted);
+  genCpf: (formatted = true) => CPF.generate(formatted),
+  isCpf: (cpf) => CPF.isValid(cpf),
+  unmaskCpj: (cpf) => cpf.replace(/[^\d]+/g, ''),
+  maskCpj: (string) => {
+    if (!TributacaoBr.isCpf(string)) return string;
+    return string.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4');
   },
-  is_cpf: cpf => {
-    return CPF.isValid(cpf);
-  },
-  unmask_cpf: cpf => cpf.replace(/[^\d]+/g, ""),
-  mask_cpf: string => {
-    if (!TributacaoBr.is_cpf(string)) return string;
-    return string.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, "$1.$2.$3-$4");
-  },
-  gen_cnpj: (formatted = true) => {
-    return CNPJ.generate(formatted);
-  },
-  is_cnpj: cnpj => {
-    return CNPJ.isValid(cnpj);
-  },
-  unmask_cnpj: cnpj => cnpj.replace(/[^\d]+/g, ""),
-  mask_cnpj: string => {
-    if (!TributacaoBr.is_cnpj(string)) return string;
+  genCnpj: (formatted = true) => CNPJ.generate(formatted),
+  isCnpj: (cnpj) => CNPJ.isValid(cnpj),
+  unmaskCnpj: (cnpj) => cnpj.replace(/[^\d]+/g, ''),
+  maskCnpj: (string) => {
+    if (!TributacaoBr.isCnpj(string)) return string;
     return string.replace(
       /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2}).*/,
-      "$1.$2.$3/$4-$5"
+      '$1.$2.$3/$4-$5',
     );
   },
-  is_cei: cei => {
-    cei = cei.replace(/[^\d]+/g, "");
+  isCei: (cei) => {
+    // eslint-disable-next-line no-param-reassign
+    cei = cei.replace(/[^\d]+/g, '');
     if (!cei || cei.length !== 12) return cei;
 
     // Multiplicar os primeiros 11 algarismos pelos seus respectivos pesos.
@@ -36,70 +29,71 @@ const TributacaoBr = {
     const pesos = [7, 4, 1, 8, 5, 2, 1, 6, 3, 7, 4];
     const numeros = cei.substring(0, 12);
     let soma = 0;
+    // eslint-disable-next-line no-plusplus
     for (let i = 0; i < 11; i++) {
-      soma = soma + pesos[i] * numeros[i];
+      soma += pesos[i] * numeros[i];
     }
     // Com a SOMA obtida, somar o algarismo da unidade com o algarismo da dezena.
     soma = soma.toString();
     const somaTam = soma.length;
     soma = soma.substring(0, somaTam);
-    let total =
-      parseInt(soma.charAt(somaTam - 2)) + parseInt(soma.charAt(somaTam - 1));
+    let total = parseInt(soma.charAt(somaTam - 2), 10) + parseInt(soma.charAt(somaTam - 1), 10);
     // Subtrair 10 o algarismo da unidade obtido no TOTAL anterior.
     total = total.toString();
     total = total.substring(0, total.length);
-    let resultado = 10 - parseInt(total.charAt(total.length - 1));
+    let resultado = 10 - parseInt(total.charAt(total.length - 1), 10);
     // O algarismo da unidade do resultado da subtração será o digito verificador.
     resultado = resultado.toString();
     resultado = resultado.substring(0, resultado.length);
 
     return numeros[11] === resultado[resultado.length - 1];
   },
-  unmask_cei: cei => cei.replace(/[^\d]+/g, ""),
-  mask_cei: string => {
-    if (!TributacaoBr.is_cei(string)) return string;
+  unmaskCei: (cei) => cei.replace(/[^\d]+/g, ''),
+  maskCei: (string) => {
+    if (!TributacaoBr.isCei(string)) return string;
     return string.replace(
       /^(\d{2})(\d{3})(\d{3})(\d{3})(\d{1}).*/,
-      "$1.$2.$3.$4-$5"
+      '$1.$2.$3.$4-$5',
     );
   },
-  mask_PIS: string => {
-    if (!validatePIS(string)) return string;
+  maskPIS: (string) => {
+    if (!TributacaoBr.validatePIS(string)) return string;
     return string
-      .replace(/[^\d]+/g, "")
-      .replace(/^(\d{3})(\d{5})(\d{2})(\d{1}).*/, "$1.$2.$3-$4");
+      .replace(/[^\d]+/g, '')
+      .replace(/^(\d{3})(\d{5})(\d{2})(\d{1}).*/, '$1.$2.$3-$4');
   },
-  mask_titulo_eleitor: string => {
+  maskTituloEleitor: (string) => {
     if (!string) return string;
-    return string.replace(/[^\d]+/g, "").replace(/^(\d{10})(\d{2}).*/, "$1/$2");
+    return string.replace(/[^\d]+/g, '').replace(/^(\d{10})(\d{2}).*/, '$1/$2');
   },
-  is_federal_number: value => {
-    value = value.replace(/[^\d]+/g, "");
+  isFederalNumber: (value) => {
+    // eslint-disable-next-line no-param-reassign
+    value = value.replace(/[^\d]+/g, '');
     if (!value) return false;
 
-    if (value.length === 14) return TributacaoBr.is_cnpj(value);
-    if (value.length === 12) return TributacaoBr.is_cei(value);
-    if (value.length === 11) return TributacaoBr.is_cpf(value);
+    if (value.length === 14) return TributacaoBr.isCnpj(value);
+    if (value.length === 12) return TributacaoBr.isCei(value);
+    if (value.length === 11) return TributacaoBr.isCpf(value);
 
     return false;
   },
-  unmask_federal_number: federal_number =>
-    federal_number.replace(/[^\d]+/g, ""),
-  mask_federal_number: value => {
-    value = value.replace(/[^\d]+/g, "");
+  unmaskFederalNumber: (federalNumber) => federalNumber.replace(/[^\d]+/g, ''),
+  maskFederalNumber: (value) => {
+    // eslint-disable-next-line no-param-reassign
+    value = value.replace(/[^\d]+/g, '');
     if (!value || !value.length) return value;
 
     switch (value.length) {
       case 14:
-        return TributacaoBr.mask_cnpj(value);
+        return TributacaoBr.maskCnpj(value);
       case 11:
-        return TributacaoBr.mask_cpf(value);
-      case 14:
-        return TributacaoBr.mask_cei(value);
+        return TributacaoBr.maskCpj(value);
+      case 12:
+        return TributacaoBr.maskCei(value);
       default:
         return value;
     }
-  }
+  },
 };
 
 module.exports = TributacaoBr;

@@ -1,16 +1,15 @@
-const Regex = require("./../regexs/Regexs");
-const RgxPresets = require("./../regexs/RgxPresets");
+const Regex = require('./../regexs/Regexs');
+const RgxPresets = require('./../regexs/RgxPresets');
 
 const Networks = {
-  is_url: val => Regex.match_regexp(val, RgxPresets.Url),
-  is_domain: val =>
-    Regex.match_regexp(val.replace(/(^\w+:|^)\/\//, ""), RgxPresets.Domain),
-  is_weak_domain: val => Regex.match_regexp(val, RgxPresets.WeakDomain),
-  is_email: val => Regex.match_regexp(val, RgxPresets.Email),
-  is_email_with_tld: val => Regex.match_regexp(val, RgxPresets.EmailWithTLD),
-  is_ip: val => Regex.match_regexp(val, RgxPresets.IP),
-  is_ipv4: val => Regex.match_regexp(val, RgxPresets.IPv4),
-  is_ipv6: val => Regex.match_regexp(val, RgxPresets.IPv6)
+  is_url: (val) => Regex.matchRegexp(val, RgxPresets.Url),
+  isDomain: (val) => Regex.matchRegexp(val.replace(/(^\w+:|^)\/\//, ''), RgxPresets.Domain),
+  isWeakDomain: (val) => Regex.matchRegexp(val, RgxPresets.WeakDomain),
+  isEmail: (val) => Regex.matchRegexp(val, RgxPresets.Email),
+  isEmailWithTld: (val) => Regex.matchRegexp(val, RgxPresets.EmailWithTLD),
+  isIp: (val) => Regex.matchRegexp(val, RgxPresets.IP),
+  isIpv4: (val) => Regex.matchRegexp(val, RgxPresets.IPv4),
+  isIpv6: (val) => Regex.matchRegexp(val, RgxPresets.IPv6),
 };
 
 module.exports = Networks;

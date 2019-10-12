@@ -22,104 +22,104 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 #### *STRING COMEÇA COM*
 
-`Strings.starts_with('banana', 'bana');`  
+`Strings.startsWith('banana', 'bana');`  
 **Result:** true
 
 #### *STRING TERMINA COM*
 
-`Strings.ends_with('banana', ana');`  
+`Strings.endsWith('banana', ana');`  
 **Result:** true
 
 #### *REMOVE CARÁCTERES DO INÍCIO*
 
-`Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
+`Strings.removeCharLeft('remover 1 caracter do inicio', 1);`  
 **Result:** emover 1 caracter do inicio
 
 #### *REMOVE CARÁCTERES DO FINAL*
 
-`Strings.remove_char_right('remover 3 caracteres do final', 3);`  
+`Strings.removeCharRight('remover 3 caracteres do final', 3);`  
 **Result:** remover 3 caracteres do fi
 
 #### *CONCATENA CARÁCTERES NO INÍCIO*
 
-`Strings.str_pad_left('.234890', 5, '0')`  
+`Strings.strPadLeft('.234890', 5, '0')`  
 **Result:** 00000.234890
 
-`Strings.str_pad_left('.234890', 5, 'X')`  
+`Strings.strPadLeft('.234890', 5, 'X')`  
 **Result:** XXXXX.234890
 
-`Strings.str_pad_left('.234890', 5, '-')`  
+`Strings.strPadLeft('.234890', 5, '-')`  
 **Result:** -----.234890
 
-`Strings.remove_char_left('remover 1 caracter do inicio', 1);`  
+`Strings.removeCharLeft('remover 1 caracter do inicio', 1);`  
 **Result:** emover 1 caracter do inicio
 
 #### *CONCATENA CARÁCTERES NO FINAL*
 
-`Strings.str_pad_right('522', 5, '0')`  
+`Strings.strPadRight('522', 5, '0')`  
 **Result:** 52200000
 
-`Strings.str_pad_right('522', 4, 'X')`  
+`Strings.strPadRight('522', 4, 'X')`  
 **Result:** 522XXXX
 
-`Strings.str_pad_right('522', 3, '-')`  
+`Strings.strPadRight('522', 3, '-')`  
 **Result:** 522---
 
 #### *PLURAL PT-BR*
 
-`Strings.pluralize_pt('caneta');`  
+`Strings.pluralizePt('caneta');`  
 **Result:** canetas
 
-`Strings.pluralize_pt('pessoa');`  
+`Strings.pluralizePt('pessoa');`  
 **Result:** pessoas
 
-`Strings.pluralize_pt('qualquer');`  
+`Strings.pluralizePt('qualquer');`  
 **Result:** quaisquer
 
-`Strings.pluralize_pt('mão');`  
+`Strings.pluralizePt('mão');`  
 **Result:** mãos
 
-`Strings.pluralize_pt('cidade');`  
+`Strings.pluralizePt('cidade');`  
 **Result:** cidades
 
-`Strings.pluralize_pt('cidadão');`  
+`Strings.pluralizePt('cidadão');`  
 **Result:** cidadões
 
 #### *SINGULAR PT-BR*
 
-`Strings.singulate_pt('canetas');`  
+`Strings.singulatePt('canetas');`  
 **Result:** caneta
 
-`Strings.singulate_pt('pessoas');`  
+`Strings.singulatePt('pessoas');`  
 **Result:** pessoa
 
-`Strings.singulate_pt('quaisquer');`  
+`Strings.singulatePt('quaisquer');`  
 **Result:** qualquer
 
-`Strings.singulate_pt('mãos');`  
+`Strings.singulatePt('mãos');`  
 **Result:** mão
 
-`Strings.singulate_pt('cidades');`  
+`Strings.singulatePt('cidades');`  
 **Result:** cidade
 
-`Strings.singulate_pt('cidadões');`  
+`Strings.singulatePt('cidadões');`  
 **Result:** cidadão
 
 #### *REMOVE OS ACENTOS*
 
-`Strings.to_non_acents('ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž')`  
+`Strings.toNonAcents('ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž')`  
 **Result:** rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz
 
-`Strings.to_non_acents('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`  
+`Strings.toNonAcents('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`  
 **Result:** O CORACAO E DOCE COMO BANANA CARAMELIZADA COM ACUCAR.
 
-`Strings.to_non_acents('O coração é doce como banana caramelizada com açucar.')`  
+`Strings.toNonAcents('O coração é doce como banana caramelizada com açucar.')`  
 **Result:** O coracao e doce como banana caramelizada com acucar.
 
 #### *CONVERTER EM UMA URL*
 
-`Strings.to_url('Marcus Vinícius Mendes Gonçalves')`  
+`Strings.toUrl('Marcus Vinícius Mendes Gonçalves')`  
 **Result:** marcus_vinicius_mendes_goncalves
 
-`Strings.to_url('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`  
+`Strings.toUrl('O CORAÇÃO É DOCE COMO BANANA CARAMELIZADA COM AÇUCAR.')`  
 **Result:** o_coracao_e_doce_como_banana_caramelizada_com_acucar
