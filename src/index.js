@@ -9,13 +9,13 @@ const TributacaoBr = require('./tributacao_br/TributacaoBr');
 const Validations = require('./validations/Validations');
 
 module.exports = {
-	Dates,
-	Functions,
-	Locations,
-	Ids,
-	Networks,
-	Numbers,
-	Strings,
-	TributacaoBr,
-	Validations,
+  Dates,
+  Functions,
+  Locations,
+  Ids,
+  Networks,
+  Numbers,
+  Strings,
+  TributacaoBr,
+  Validations,
 };

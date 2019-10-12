@@ -5,9 +5,6 @@
 #SRC
 lib/
 
-#IDE
-.idea/
-
 # Logs
 logs
 *.log
