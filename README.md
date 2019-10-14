@@ -1,5 +1,5 @@
 # af-helpers
-The js-helpers provides different helpers which enable to wrap functions and run chain functions.
+The af-helpers provides different helpers which enable to wrap functions and run chain functions.
 This library is thinked to help and bump down time of development of apps, and it is supported.
 Where you go you can use it. For both,  browser and node.js environments.
 
