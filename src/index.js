@@ -7,6 +7,9 @@ const Numbers = require('./numbers/Numbers');
 const Strings = require('./strings/Strings');
 const TributacaoBr = require('./tributacao_br/TributacaoBr');
 const Validations = require('./validations/Validations');
+const PessoaFisica = require('./documentos/PessoaFisica');
+const PessoaCei = require('./documentos/PessoaCei');
+const PessoaJuridica = require('./documentos/PessoaJuridica');
 
 module.exports = {
   Dates,
@@ -18,4 +21,7 @@ module.exports = {
   Strings,
   TributacaoBr,
   Validations,
+  PessoaFisica,
+  PessoaCei,
+  PessoaJuridica,
 };

@@ -4,7 +4,7 @@ const PessoaJuridica = {
   genCnpj: (formated = true) => TributacaoBr.genCnpj(formated),
   isCnpj: (cnpj) => TributacaoBr.isCnpj(cnpj),
   unmaskCnpj: (cnpj) => TributacaoBr.unmaskCnpj(cnpj),
-  maskCnpj: (unmaskedCnpj) => TributacaoBr.unmaskCnpj(unmaskedCnpj),
+  maskCnpj: (unmaskedCnpj) => TributacaoBr.maskCnpj(unmaskedCnpj),
 };
 
 module.exports = PessoaJuridica;
