@@ -179,7 +179,7 @@ describe('Validations', () => {
       assert.equal(Validations.isEmptyTrimed(value), expected);
     });
   });
-  describe('IS EMPTY TRIMED', () => {
+  describe('IS NOT EMPTY TRIMED', () => {
     const value = ' marcus';
     const expected = false;
     it(`'must validate if '${value}' is not empty trimed`, () => {

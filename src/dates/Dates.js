@@ -1,26 +1,39 @@
 const moment = require('moment');
 
 const Dates = {
-  formatDate: (date, pattern) => moment(date).format(pattern),
+  formatDate: (date, pattern, utc = false) => {
+    if (utc) return moment.utc(date).format(pattern);
+    return moment(date).format(pattern);
+  },
   milliToDays: (milliseconds) => milliseconds / 24 / 60 / 60 / 1000,
-  milli_to_months: (milliseconds) => {
+  milliToMonths: (milliseconds) => {
     const monthMilli = 2629746000; // gregorian calendar
     return milliseconds / monthMilli;
   },
+  diffDays: (d1, d2) => {
+    const timeDiff = Math.abs(d2.getTime() - d1.getTime());
+    return Math.ceil(timeDiff / (1000 * 3600 * 24));
+  },
+  diffMonths: (d1, d2) => {
+    const timeDiff = Math.abs(d2.getTime() - d1.getTime());
+    const diffDias = Math.ceil(timeDiff / (1000 * 3600 * 24));
+
+    return Math.floor(diffDias / 30);
+  },
   // eslint-disable-next-line max-len
-  date_to_utc: (date) => new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), 0, 0, 0, 0),
-  days_between: (firstDate, secondDate, utc) => {
-    if (!utc) return Dates.to_days(secondDate - firstDate);
-    return Dates.to_days(Dates.date_to_utc(secondDate) - Dates.date_to_utc(firstDate));
-  },
-  months_between: (firstDate, secondDate, utc) => {
-    if (!utc) return Dates.milli_to_months(firstDate - secondDate);
-    return Dates.milli_to_months(Dates.toUTC(firstDate) - Dates.toUTC(secondDate));
-  },
+  dateToUtc: (date) => new Date(date.getUTCFullYear(), date.getUTCMonth(), date.getUTCDate(), 0, 0, 0, 0),
   // eslint-disable-next-line max-len
   daysInMonth: (year, month) => Dates.milliToDays(Date.UTC(year, month + 1, 1) - Date.UTC(year, month, 1)),
   daysInYear: (year) => Dates.milliToDays(Date.UTC(year + 1, 0, 1) - Date.UTC(year, 0, 1)),
   removeMinutes: (date, minutes) => new Date(date.getTime() - minutes * 60000),
+  removeMonths: (date, meses) => {
+    date.setUTCMonth(date.getUTCMonth() - meses);
+    return date;
+  },
+  addMonths: (date, meses) => {
+    date.setUTCMonth(date.getUTCMonth() + meses);
+    return date;
+  },
   dateToMonthDay: (date) => `${(`0${date.getDate()}`).substr(-2)}/${(`0${date.getMonth() + 1}`).substr(-2)}`,
   minutesToHourMinute: (minutes) => {
     if (!minutes || typeof minutes !== 'number') return undefined;
@@ -37,11 +50,9 @@ const Dates = {
     return `${hours}:${modMinutes}`;
   },
   hourMinuteToMinutes: (timeString) => {
-    if (timeString && typeof timeString === 'string') {
-      // Split "12:34" by ":", [0] = hours and [1] = minutes.
-      const timeArray = timeString.split(':');
-      return parseInt(timeArray[1], 10) + parseInt(timeArray[0], 10) * 60;
-    }
+    // Split "12:34" by ":", [0] = hours and [1] = minutes.
+    const timeArray = timeString.split(':');
+    return parseInt(timeArray[1], 10) + parseInt(timeArray[0], 10) * 60;
   },
   maskHourMinutes: (val) => val.replace(/(\d{2})(\d)/, '$1:$2'),
   // Transform: "hh:mm" -> Float (hours).
@@ -84,24 +95,6 @@ const Dates = {
     const seconds = secNum - (hours * 3600) - (minutes * 60);
 
     return `${hours} hora${hours > 1 ? 's' : ''}, ${minutes} minuto${minutes > 1 ? 's' : ''} e ${seconds} segundo${seconds > 1 ? 's' : ''}`;
-  },
-  diffDays: (d1, d2) => {
-    const timeDiff = Math.abs(d2.getTime() - d1.getTime());
-    return Math.ceil(timeDiff / (1000 * 3600 * 24));
-  },
-  diffMonths: (d1, d2) => {
-    const timeDiff = Math.abs(d2.getTime() - d1.getTime());
-    const diffDias = Math.ceil(timeDiff / (1000 * 3600 * 24));
-
-    return Math.floor(diffDias / 30);
-  },
-  addMonths: (date, meses) => {
-    date.setUTCMonth(date.getUTCMonth() + meses);
-    return date;
-  },
-  removeMonths: (date, meses) => {
-    date.setUTCMonth(date.getUTCMonth() + meses);
-    return date;
   },
 };
 
