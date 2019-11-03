@@ -3,31 +3,20 @@ The documentation is separated by Helper. Still in doubt? Is there anything miss
 
 [HOME](../README.md) / [DATES](DATES.md)  / [LOCATIONS](LOCATIONS.md)  / [FUNCTIONS](FUNCTIONS.md)  / [NETWORKS](NETWORKS.md)  / [NUMBERS](NUMBERS.md)  / [STRINGS](STRINGS.md)  / [PESSOA-CEI](PESSOA-CEI.md)  / [PESSOA-FISICA](PESSOA-FISICA.md)  / [PESSOA-JURIDICA](PESSOA-JURIDICA.md)  / [VALIDATIONS](VALIDATIONS.md)  
 
-### LOCATIONS
+### PESSOA-CEI
+ATTENTION! For security reasons, the actual value of cpf / cnpj has been changed to XXX. It is a library for development and testing purposes only.
 
-#### *IS CEP*
+##### *DEVE SER UM CEI VÁLIDO*
 
-`Locations.isCep('89.888-777')`  
+`TributacaoBr.isCei("22.XXX.71784/80")`  
 **Result:** true  
 
-`Locations.isCep('89888777')`  
-**Result:** true  
+##### *ADICIONA MÁSCARA AO CEI*
 
-#### *MASK CEP*
+`TributacaoBr.maskCei("22XXX7178480")`  
+**Result:** Ex.: 22.XXX.71784/80  
 
-`Locations.maskCep('89888777')`  
-**Result:** 89.888-777
+##### *REMOVE MÁSCARA DE CEI*
 
-#### *UMASK CEP*
-
-`Locations.unmaskCep('89.888-777')`  
-**Result:** 89888777
-
-#### *IS UF*
-
-`Locations.isUf('SC')`  
-**Result:** true
-
-`Locations.isUf('DD')`  
-**Result:** false
-
+`TributacaoBr.unmaskCei("22.XXX.71784/80")`  
+**Result:** Ex.: 22XXX7178480  
