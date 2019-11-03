@@ -1,4 +1,4 @@
-const TributacaoBr = require('./../tributacao_br/TributacaoBr');
+const TributacaoBr = require('../tributacaobr/TributacaoBr');
 
 const PessoaJuridica = {
   genCnpj: (formated = true) => TributacaoBr.genCnpj(formated),
