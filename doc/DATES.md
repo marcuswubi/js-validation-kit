@@ -5,6 +5,14 @@ Everything you need to know about the helpers you find here. The documentation i
 
 ### DATES
 
+#### *SECONDS TO UPTIME - `secondsToUptime()`*
+
+`Dates.secondsToUptime(132);`  
+**Result:** 0 horas, 2 minutos e 12 segundos
+
+`Dates.secondsToUptime(264);`  
+**Result:** 0 horas, 4 minutos e 24 segundos
+
 #### *Format*
 
 |   	                              | Token                 | Output                                            |

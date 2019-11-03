@@ -77,6 +77,14 @@ const Dates = {
     'Novembro',
     'Dezembro',
   ][monthNumber],
+  secondsToUptime: (value) => {
+    const secNum = parseInt(value, 10); // don't forget the second param
+    const hours = Math.floor(secNum / 3600);
+    const minutes = Math.floor((secNum - (hours * 3600)) / 60);
+    const seconds = secNum - (hours * 3600) - (minutes * 60);
+
+    return `${hours} hora${hours > 1 ? 's' : ''}, ${minutes} minuto${minutes > 1 ? 's' : ''} e ${seconds} segundo${seconds > 1 ? 's' : ''}`;
+  },
   diffDays: (d1, d2) => {
     const timeDiff = Math.abs(d2.getTime() - d1.getTime());
     return Math.ceil(timeDiff / (1000 * 3600 * 24));

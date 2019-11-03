@@ -1,3 +1,5 @@
+const snake = require('to-snake-case');
+
 const Strings = {
   stringSize: (str) => str.length,
   isString: (value) => typeof value === 'string' || value instanceof String,
@@ -8,6 +10,7 @@ const Strings = {
   lowercase: (str) => (str ? str.toLowerCase() : str),
   uppercase: (str) => (str ? str.toUpperCase() : str),
   capitalize: (s) => s.toLowerCase().replace(/^\w/, c => c.toUpperCase()),
+  snakeize: (s) => snake(s),
   pluralizeExceptionsPt: () => ({
     cidadão: 'cidadões',
     mão: 'mãos',

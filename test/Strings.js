@@ -48,6 +48,21 @@ describe('Strings', () => {
       assert.equal(Strings.lowercase('STRING DEMO'), 'string demo');
     });
   });
+  describe('STRING SNAKE CASE', () => {
+    it('\'STRING DEMO\' when use \'snakeize\' must return \'string_demo\'', () => {
+      assert.equal(Strings.snakeize('STRING DEMO'), 'string_demo');
+    });
+  });
+  describe('STRING SNAKE CASE', () => {
+    it('\'stringDemo\' when use \'snakeize\' must return \'string_demo\'', () => {
+      assert.equal(Strings.snakeize('stringDemo'), 'string_demo');
+    });
+  });
+  describe('STRING SNAKE CASE', () => {
+    it('\'StringDemo\' when use \'snakeize\' must return \'string_demo\'', () => {
+      assert.equal(Strings.snakeize('StringDemo'), 'string_demo');
+    });
+  });
   describe('STARTS WITH', () => {
     it('\'banana\' must starts with \'bana\'', () => {
       assert.equal(Strings.startsWith('banana', 'bana'), true);
