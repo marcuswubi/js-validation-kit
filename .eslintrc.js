@@ -11,9 +11,10 @@ module.exports = {
     SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
-    ecmaVersion: 2018,
+    ecmaVersion: 9,
     sourceType: 'module',
   },
   rules: {
+    "import/no-extraneous-dependencies": ["error", {"devDependencies": true}]
   },
 };

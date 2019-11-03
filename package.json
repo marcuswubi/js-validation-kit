@@ -1,6 +1,6 @@
 {
   "name": "af-helpers",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "description": "The js-helpers provides different helpers which enable to wrap functions and run chain functions. This library is thinked to help and bump down time of development of apps, and it is supported.",
   "main": "lib/index.js",
   "dependencies": {
@@ -28,12 +28,16 @@
     "nitro": "echo 'Coffeeeee timeee!'",
     "test": "./node_modules/.bin/mocha test/**/*.js --require babel-register",
     "lint": "./node_modules/.bin/eslint src/*.js",
-    "prepush": "npm run lint",
     "clear": "rimraf lib",
     "build": "npm run clear && ./node_modules/.bin/babel --out-dir lib src",
     "build:watch": "npm run build -- --watch",
-    "test:tdd": "./node_modules/.bin/mocha tests/**/*.spec.js --require babel-register --watch",
+    "test:tdd": "./node_modules/.bin/mocha test/**/*.js --require babel-register --watch",
     "test:coverage": "nyc npm test"
+  },
+  "husky": {
+    "hooks": {
+      "pre-push": "npm run lint"
+    }
   },
   "files": [
     "lib"
