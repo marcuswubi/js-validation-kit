@@ -15,6 +15,12 @@ const Strings = {
     cidadão: 'cidadões',
     mão: 'mãos',
     qualquer: 'quaisquer',
+    Cidadão: 'Cidadões',
+    Mão: 'Mãos',
+    Qualquer: 'Quaisquer',
+    CIDADÃO: 'CIDADÕES',
+    MÃO: 'MÃOS',
+    QUALQUER: 'QUAISQUER',
   }),
   pluralizeRulesPt: () => ({
     ão: 'ões',
@@ -27,13 +33,20 @@ const Strings = {
     us: 'i',
     x: 'xes',
     z: 'zes',
+    ÃO: 'ÕES',
+    AO: 'OES',
+    ÊS: 'ESES',
+    ES: 'ESES',
+    M: 'NS',
+    L: 'IS',
+    R: 'RES',
+    US: 'I',
+    X: 'XES',
+    Z: 'ZES',
   }),
   pluralizePt: (string) => {
-    // eslint-disable-next-line no-param-reassign
-    string = string.toLowerCase();
-
     // dont need to pluralize
-    if (/(s|ões|eses|ns|is|res|xes|zes|ãos)$/.test(string)) {
+    if (/(s|ões|eses|ns|is|res|xes|zes|ãos|S|ÕES|ESES|NS|IS|RES|XES|ZES|ÃOS)$/.test(string)) {
       return string;
     }
 
@@ -64,6 +77,12 @@ const Strings = {
     cidadões: 'cidadão',
     mãos: 'mão',
     quaisquer: 'qualquer',
+    Cidadões: 'Cidadão',
+    Mãos: 'Mão',
+    Quaisquer: 'Qualquer',
+    CIDADÕES: 'CIDADÃO',
+    MÃOS: 'MÃO',
+    QUAISQUER: 'QUALQUER',
   }),
   singulateRulesPt: () => ({
     ões: 'ão',
@@ -75,11 +94,17 @@ const Strings = {
     i: 'us',
     xes: 'x',
     zes: 'z',
+    ÕES: 'ÃO',
+    OES: 'AO',
+    ESES: 'ÊS',
+    NS: 'M',
+    IS: 'L',
+    RES: 'R',
+    I: 'US',
+    XES: 'X',
+    ZES: 'Z',
   }),
   singulatePt: (string = '') => {
-    // eslint-disable-next-line no-param-reassign
-    string = string.toLowerCase();
-
     // belong to any exceptions?
     if (Object.keys(Strings.singulateExceptionsPt()).indexOf(string) !== -1) {
       // eslint-disable-next-line max-len
@@ -144,8 +169,8 @@ const Strings = {
   toNonAcents: (string) => {
     if (!string) return '';
 
-    const accents = 'ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽž';
-    const accentsOut = 'rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZz';
+    const accents = 'ŕŔÀÁÂÃÄÅàáâãäåßÒÓÔÕÕÖØòóôõöøÈÉÊËèéêëðÇçÐÌÍÎÏìíîïÙÚÛÜùúûüÑñŠšŸÿýŽžªº';
+    const accentsOut = 'rRAAAAAAaaaaaaBOOOOOOOooooooEEEEeeeeeCcDIIIIiiiiUUUUuuuuNnSsYyyZzao';
 
     return string
       .split('')
