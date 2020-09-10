@@ -118,7 +118,7 @@ describe('Numbers', () => {
   });
   describe('NUMBER TO WORD PT', () => {
     const value = 1785.5;
-    const expected = 'um mil setecentos e oitenta e cinco vírgula cinco';
+    const expected = 'um mil setecentos e oitenta e cinco vírgula cinco décimos';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value), expected);
     });
@@ -132,7 +132,7 @@ describe('Numbers', () => {
   });
   describe('NUMBER TO WORD PT', () => {
     const value = 0.345;
-    const expected = 'zero vírgula trezentos e quarenta e cinco';
+    const expected = 'zero vírgula trezentos e quarenta e cinco milésimos';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value), expected);
     });
@@ -160,77 +160,77 @@ describe('Numbers', () => {
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 1;
-    const expected = 'um porcento';
+    const expected = 'um por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 223;
-    const expected = 'duzentos e vinte e três porcento';
+    const expected = 'duzentos e vinte e três por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 61;
-    const expected = 'sessenta e um porcento';
+    const expected = 'sessenta e um por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 6546785;
-    const expected = 'seis milhões quinhentos e quarenta e seis mil setecentos e oitenta e cinco porcento';
+    const expected = 'seis milhões quinhentos e quarenta e seis mil setecentos e oitenta e cinco por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 687;
-    const expected = 'seiscentos e oitenta e sete porcento';
+    const expected = 'seiscentos e oitenta e sete por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 1785.5;
-    const expected = 'um mil setecentos e oitenta e cinco vírgula cinco porcento';
+    const expected = 'um mil setecentos e oitenta e cinco vírgula cinco décimos por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 0;
-    const expected = 'zero porcento';
+    const expected = 'zero por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 0.345;
-    const expected = 'zero vírgula trezentos e quarenta e cinco porcento';
+    const expected = 'zero vírgula trezentos e quarenta e cinco milésimos por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 14;
-    const expected = 'quatorze porcento';
+    const expected = 'quatorze por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 4536;
-    const expected = 'quatro mil quinhentos e trinta e seis porcento';
+    const expected = 'quatro mil quinhentos e trinta e seis por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });
   });
   describe('NUMBER TO WORD PT - % PORCENTAGEM', () => {
     const value = 425642368575263200000;
-    const expected = 'quatrocentos e vinte e cinco quintilhões seiscentos e quarenta e dois quatrilhões trezentos e sessenta e oito trilhões quinhentos e setenta e cinco bilhões duzentos e sessenta e três milhões e duzentos mil porcento';
+    const expected = 'quatrocentos e vinte e cinco quintilhões seiscentos e quarenta e dois quatrilhões trezentos e sessenta e oito trilhões quinhentos e setenta e cinco bilhões duzentos e sessenta e três milhões e duzentos mil por cento';
     it(`'${value}' must return '${expected}'`, () => {
       assert.equal(Numbers.to_word_pt(value, 'porcentagem'), expected);
     });

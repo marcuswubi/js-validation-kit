@@ -1,61 +1,25 @@
-const { CPF } = require('cpf_cnpj');
-const { CNPJ } = require('cpf_cnpj');
+const CPF = require('@fnando/cpf/commonjs');
+const CNPJ = require('@fnando/cnpj/commonjs');
 
 const TributacaoBr = {
-  genCpf: (formatted = true, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.genCpf() is deprecated and will be deleted. Replaced by PessoaFisica.');
-    return CPF.generate(formatted);
-  },
-  isCpf: (cpf, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.isCpf() is deprecated and will be deleted. Replaced by PessoaFisica.');
-    return CPF.isValid(cpf);
-  },
-  unmaskCpj: (cpf, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.unmaskCpj() is deprecated and will be deleted. Replaced by PessoaFisica.');
-    return cpf.replace(/[^\d]+/g, '');
-  },
-  maskCpj: (string, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.maskCpj() is deprecated and will be deleted. Replaced by PessoaFisica.');
-
+  genCpf: (formatted = true) => CPF.generate(formatted),
+  isCpf: (cpf) => CPF.isValid(cpf),
+  unmaskCpj: (cpf) => cpf.replace(/[^\d]+/g, ''),
+  maskCpj: (string) => {
     if (!TributacaoBr.isCpf(string)) return string;
     return string.replace(/^(\d{3})(\d{3})(\d{3})(\d{2}).*/, '$1.$2.$3-$4');
   },
-  genCnpj: (formatted = true, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.genCnpj() is deprecated and will be deleted. Replaced by PessoaJuridica.');
-
-    return CNPJ.generate(formatted);
-  },
-  isCnpj: (cnpj, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.isCnpj() is deprecated and will be deleted. Replaced by PessoaJuridica.');
-
-    return CNPJ.isValid(cnpj);
-  },
-  unmaskCnpj: (cnpj, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.unmaskCnpj() is deprecated and will be deleted. Replaced by PessoaJuridica.');
-
-    return cnpj.replace(/[^\d]+/g, '');
-  },
-  maskCnpj: (string, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.maskCnpj() is deprecated and will be deleted. Replaced by PessoaJuridica.');
-
+  genCnpj: (formatted = true) => CNPJ.generate(formatted),
+  isCnpj: (cnpj) => CNPJ.isValid(cnpj),
+  unmaskCnpj: (cnpj) => cnpj.replace(/[^\d]+/g, ''),
+  maskCnpj: (string) => {
     if (!TributacaoBr.isCnpj(string)) return string;
     return string.replace(
       /^(\d{2})(\d{3})(\d{3})(\d{4})(\d{2}).*/,
       '$1.$2.$3/$4-$5',
     );
   },
-  isCei: (cei, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.isCei() is deprecated and will be deleted. Replaced by PessoaCei.');
-
+  isCei: (cei) => {
     // eslint-disable-next-line no-param-reassign
     cei = cei.replace(/[^\d]+/g, '');
     if (!cei || cei.length !== 12) return cei;
@@ -84,16 +48,8 @@ const TributacaoBr = {
 
     return numeros[11] === resultado[resultado.length - 1];
   },
-  unmaskCei: (cei, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.unmaskCei() is deprecated and will be deleted. Replaced by PessoaCei.');
-
-    return cei.replace(/[^\d]+/g, '');
-  },
-  maskCei: (string, deprecated = true) => {
-    // eslint-disable-next-line no-console
-    if (deprecated) console.error('TributacaoBr.maskCei() is deprecated and will be deleted. Replaced by PessoaCei.');
-
+  unmaskCei: (cei) => cei.replace(/[^\d]+/g, ''),
+  maskCei: (string) => {
     if (!TributacaoBr.isCei(string)) return string;
     return string.replace(
       /^(\d{2})(\d{3})(\d{3})(\d{3})(\d{1}).*/,
@@ -111,9 +67,7 @@ const TributacaoBr = {
 
     return false;
   },
-  unmaskFederalNumber: (federalNumber) => {
-    return federalNumber.replace(/[^\d]+/g, '');
-  },
+  unmaskFederalNumber: (federalNumber) => federalNumber.replace(/[^\d]+/g, ''),
   maskFederalNumber: (value) => {
     // eslint-disable-next-line no-param-reassign
     value = value.replace(/[^\d]+/g, '');

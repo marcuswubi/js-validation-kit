@@ -1,10 +1,10 @@
 const TributacaoBr = require('../tributacaobr/TributacaoBr.js');
 
 const PessoaFisica = {
-  genCpf: (formated = true) => TributacaoBr.genCpf(formated, false),
-  isCpf: (cpf) => TributacaoBr.isCpf(cpf, false),
-  unmaskCpf: (cpf) => TributacaoBr.unmaskCpj(cpf, false),
-  maskCpf: (unmaskedCpf) => TributacaoBr.maskCpj(unmaskedCpf, false),
+  genCpf: (formated = true) => TributacaoBr.genCpf(formated),
+  isCpf: TributacaoBr.isCpf,
+  unmaskCpf: TributacaoBr.unmaskCpj,
+  maskCpf: TributacaoBr.maskCpj,
   maskPIS: (string) => {
     if (!TributacaoBr.validatePIS(string)) return string;
     return string

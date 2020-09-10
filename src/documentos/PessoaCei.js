@@ -1,9 +1,9 @@
 const TributacaoBr = require('../tributacaobr/TributacaoBr');
 
 const PessoaCei = {
-  isCei: (cei) => TributacaoBr.isCei(cei, false),
-  unmaskCei: (cei) => TributacaoBr.unmaskCei(cei, false),
-  maskCei: (unmaskedCei) => TributacaoBr.maskCei(unmaskedCei, false),
+  isCei: (cei) => TributacaoBr.isCei(cei),
+  unmaskCei: (cei) => TributacaoBr.unmaskCei(cei),
+  maskCei: (unmaskedCei) => TributacaoBr.maskCei(unmaskedCei),
 };
 
 module.exports = PessoaCei;
