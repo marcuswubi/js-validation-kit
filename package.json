@@ -1,6 +1,6 @@
 {
   "name": "af-helpers",
-  "version": "1.5.0",
+  "version": "1.6.0",
   "description": "The js-helpers provides different helpers which enable to wrap functions and run chain functions. This library is thinked to help and bump down time of development of apps, and it is supported.",
   "main": "lib/index.js",
   "dependencies": {

@@ -96,6 +96,7 @@ const Dates = {
 
     return `${hours} hora${hours > 1 ? 's' : ''}, ${minutes} minuto${minutes > 1 ? 's' : ''} e ${seconds} segundo${seconds > 1 ? 's' : ''}`;
   },
+  dateBrToUs: (date) => date.split('/').reverse().join('-'),
 };
 
 module.exports = Dates;

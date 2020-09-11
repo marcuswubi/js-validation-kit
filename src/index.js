@@ -1,7 +1,8 @@
+const Arrays = require('./arrays/Arrays');
 const Dates = require('./dates/Dates');
 const Functions = require('./functions/Functions');
-const Locations = require('./locations/Locations');
 const Ids = require('./ids/Ids');
+const Locations = require('./locations/Locations');
 const Networks = require('./networks/Networks');
 const Numbers = require('./numbers/Numbers');
 const Strings = require('./strings/Strings');
@@ -12,10 +13,11 @@ const PessoaCei = require('./documentos/PessoaCei');
 const PessoaJuridica = require('./documentos/PessoaJuridica');
 
 module.exports = {
+  Arrays,
   Dates,
   Functions,
-  Locations,
   Ids,
+  Locations,
   Networks,
   Numbers,
   Strings,
