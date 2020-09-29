@@ -11,6 +11,8 @@ const Validations = require('./validations/Validations');
 const PessoaFisica = require('./documentos/PessoaFisica');
 const PessoaCei = require('./documentos/PessoaCei');
 const PessoaJuridica = require('./documentos/PessoaJuridica');
+const Regexs = require('./regexs/Regexs');
+const RgxPresets = require('./regexs/RgxPresets');
 
 module.exports = {
   Arrays,
@@ -26,4 +28,6 @@ module.exports = {
   PessoaFisica,
   PessoaCei,
   PessoaJuridica,
+  Regexs,
+  RgxPresets,
 };
