@@ -84,6 +84,16 @@ const TributacaoBr = {
         return value;
     }
   },
+  calcChaveModulo11: (chave, retornarResto = false, multiplicadores = [2, 3, 4, 5, 6, 7, 8, 9]) => {
+    let i = 0;
+    const chave43 = chave.substring(0, chave.length-3);
+    const resto = chave43.split('').reduceRight((anterior, atual) => {
+      if (i > multiplicadores.length - 1) i = 0;
+      return (multiplicadores[i++] * parseInt(atual, 10)) + anterior;
+    }, 0) % 11;
+
+    return retornarResto ? resto : (11 - resto >= 10 ? 0 : 11 - resto);
+  }
 };
 
 module.exports = TributacaoBr;
