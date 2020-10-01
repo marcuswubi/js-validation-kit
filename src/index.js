@@ -1,4 +1,5 @@
 const Arrays = require('./arrays/Arrays');
+const ChaveDfe = require('./tributacaobr/ChaveDfe');
 const Dates = require('./dates/Dates');
 const Functions = require('./functions/Functions');
 const Ids = require('./ids/Ids');
@@ -23,6 +24,7 @@ module.exports = {
   Networks,
   Numbers,
   Strings,
+  ChaveDfe,
   TributacaoBr,
   Validations,
   PessoaFisica,
