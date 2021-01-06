@@ -1,19 +1,56 @@
 ### NAVIGATION:
-Everything you need to know about the helpers you find here. The documentation is separated by Helper. Still in doubt? Is there anything missing in the documentation? Open an issue! 
+Everything you need to know about the helpers you find here. The documentation is separated by Helper. Still in doubt? Is there anything missing in the documentation? Open an issue!
 
-[HOME](../README.md) / [DATES](DATES.md)  / [LOCATIONS](LOCATIONS.md)  / [FUNCTIONS](FUNCTIONS.md)  / [NETWORKS](NETWORKS.md)  / [NUMBERS](NUMBERS.md)  / [STRINGS](STRINGS.md)  / [PESSOA-CEI](PESSOA-CEI.md)  / [PESSOA-FISICA](PESSOA-FISICA.md)  / [PESSOA-JURIDICA](PESSOA-JURIDICA.md)  / [VALIDATIONS](VALIDATIONS.md)  
+[HOME](../README.md) / [DATES](DATES.md)  / [LOCATIONS](LOCATIONS.md)  / [FUNCTIONS](FUNCTIONS.md)  / [NETWORKS](NETWORKS.md)  / [NUMBERS](NUMBERS.md)  / [STRINGS](STRINGS.md)  / [PESSOA-CEI](PESSOA-CEI.md)  / [PESSOA-FISICA](PESSOA-FISICA.md)  / [PESSOA-JURIDICA](PESSOA-JURIDICA.md)  / [VALIDATIONS](VALIDATIONS.md)
 
 ### DATES
 
 #### *SECONDS TO UPTIME - `secondsToUptime()`*
 
-`Dates.secondsToUptime(132);`  
-**Result:** 0 horas, 2 minutos e 12 segundos
+`Dates.secondsToUptime(132);`
+**Resultado:** 0 horas, 2 minutos e 12 segundos
 
-`Dates.secondsToUptime(264);`  
-**Result:** 0 horas, 4 minutos e 24 segundos
+`Dates.secondsToUptime(264);`
+**Resultado:** 0 horas, 4 minutos e 24 segundos
 
-#### *Format*
+#### *DAY NUMBER TO DAY STRING - `dayNumberToDayWeek()`*
+
+`Dates.dayNumberToDayWeek(0);`
+**Resultado:** Domingo
+
+`Dates.dayNumberToDayWeek(0, true);`
+**Resultado:** Dom
+
+`Dates.dayNumberToDayWeek(2);`
+**Resultado:** Terça
+
+`Dates.dayNumberToDayWeek(2, true);`
+**Resultado:** Ter
+
+`Dates.dayNumberToDayWeek(6);`
+**Resultado:** Sábado
+
+`Dates.dayNumberToDayWeek(6, true);`
+**Resultado:** Sab
+
+
+#### *MONTH NUMBER TO MONTH STRING - `monthNumberToMonthString()`*
+
+`Dates.monthNumberToMonthString(0);`
+**Resultado:** Janeiro
+
+`Dates.monthNumberToMonthString(3);`
+**Resultado:** Abril
+
+`Dates.monthNumberToMonthString(11);`
+**Resultado:** Dezembro
+
+#### *DATE BR TO US - `dateBrToUs()`*
+
+`Dates.dateBrToUs(09/03/1990);`
+**Resultado:** 1990-03-09
+
+#### *Format by MOMENT*
 
 |   	                              | Token                 | Output                                            |
 |---	                              |---          	        |---                            	                  |
